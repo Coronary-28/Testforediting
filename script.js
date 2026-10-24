@@ -1533,14 +1533,15 @@ function submitQuestionReport(event){
     const destination = new URL(TELEGRAM_REPORT_GROUP_URL);
     if(destination.protocol !== 'https:' || destination.hostname !== 't.me'
       || !/^\/[a-zA-Z0-9_]+\/?$/.test(destination.pathname)) throw new Error('Invalid public group URL');
-    // Telegram public-username links support a UTF-8 draft when the user can write.
+    const username = destination.pathname.replace(/^\/|\/$/g, '');
+    // Open the native client directly: the t.me group landing page can drop text.
     // https://core.telegram.org/api/links#public-username-links
-    destination.search = '?text=' + encodeURIComponent(message);
-    destination.hash = '';
-    window.open(destination.href, '_blank', 'noopener,noreferrer');
-    validation.textContent = 'راجع الرسالة وأرسلها من تيليجرام. لم يُرسل أي بلاغ من الموقع. إذا لم يفتح تيليجرام، اسمح بالنوافذ المنبثقة وحاول مجددًا.';
+    const telegramUrl = 'tg://resolve?domain=' + encodeURIComponent(username)
+      + '&text=' + encodeURIComponent(message);
+    validation.textContent = 'راجع الرسالة وأرسلها من تيليجرام. لم يُرسل أي بلاغ من الموقع. يتطلب فتح المسودة تطبيق تيليجرام مثبتًا ومحدّثًا وصلاحية الكتابة في المجموعة. إذا طلب المتصفح فتح التطبيق، وافق على ذلك.';
+    window.location.assign(telegramUrl);
   }catch(error){
-    validation.textContent = 'رابط مجموعة تيليجرام غير صالح. يرجى مراجعة إعدادات الموقع.';
+    validation.textContent = 'تعذر فتح مسودة البلاغ في تيليجرام. تحقق من رابط المجموعة وتثبيت التطبيق والسماح للمتصفح بفتحه.';
   }
 }
 
