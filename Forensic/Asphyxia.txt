@@ -32,11 +32,11 @@ Correct Answer: D) Judicial hanging
 Explanation: Judicial (long-drop) hanging involves a measured drop generating massive kinetic energy, producing a hangman's fracture (C2-C3 fracture-dislocation) and sternomastoid tearing from cervical spinal cord disruption — findings not typically seen in the shorter drops of suicidal or accidental hanging.
 ###
 What are the characteristic features of a ligature mark in strangulation?
-A) Horizontal, low, complete
-B) Horizontal, low, incomplete
+A) Horizontal, low, incomplete
+B) Horizontal, low, complete
 C) Oblique, high, complete
 D) Oblique, high, incomplete
-Correct Answer: A) Horizontal, low, complete
+Correct Answer: B) Horizontal, low, complete
 Explanation: Ligature strangulation produces a horizontal (level), low (below the thyroid cartilage), and complete (fully encircling) mark, in contrast to hanging's characteristically oblique, high, and incomplete mark.
 ###
 Which features characterize ligature marks in strangulation?
@@ -48,11 +48,11 @@ Correct Answer: A) Transverse, complete rope marks
 Explanation: Ligature strangulation produces transverse (horizontal), complete, low-neck marks, distinct from the oblique, high, often incomplete marks of hanging.
 ###
 Abrasions found on the neck are always considered what until proven otherwise?
-A) Hanging
-B) Strangulation
-C) Asphyxia
-D) Drowning
-Correct Answer: B) Strangulation
+A) Type II
+B) Type III
+C) Type I
+D) Type IV
+Correct Answer: C) Type I
 Explanation: Neck abrasions (from fingernails or a ligature) are presumed indicative of strangulation until proven otherwise — a key medicolegal principle guiding initial death investigation.
 ###
 What are the characteristics of the frothy secretions seen in drowning?
