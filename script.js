@@ -37,7 +37,7 @@ const STORAGE_KEYS = {
 const DEFAULT_SETTINGS = { darkMode:false, theme:'default', bgSound:'none', bgSoundEnabled:false, volume:50, feedbackEnabled:false, animations:true };
 const IGNORE_ROOT_DIRS = new Set(['.git','.github','node_modules','assets','asset','audio','audios','img','images','css','js','docs','dist','build']);
 const BACKGROUND_SOUNDS = { none:{file:''}, cafeteria:{file:'Cafeteria.mp3'}, 'after-exam':{file:'After the exam.mp3'}, beach:{file:'Beach.mp3'}, forest:{file:'Forest.mp3'}, fireplace:{file:'Fireplace.mp3'}, 'rain-thunder':{file:'Rain-thunder.mp3'}, 'rain-window':{file:'Rain-window.mp3'} };
-const LETTERS = 'ABCDE';
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const THEMES = {
  default:{icons:{exams:'📝',wrong:'❌',favorites:'⭐',checklist:'☑️',search:'🔍',statistics:'📊',settings:'⚙️',lectures:'📚',ai:'🤖',years:'📅',start:'🚀',results:'🏆',progress:'🎯',location:'📍',success:'✅',error:'❌',review:'🧾',subject:'📘'},texts:{startExam:'🚀 Start Exam',resultsTitle:'Results',statsTitle:'📊 الإحصائيات',settingsTitle:'⚙️ الإعدادات',examSettingsTitle:'⚙️ Exam Settings',examSettingsButton:'⚙️ Exam Settings',trainingLabel:'Training Mode',examLabel:'Real Exam Mode'}},
  desert:{icons:{exams:'🏹',wrong:'🦂',favorites:'🌵',checklist:'☑️',search:'🔎',statistics:'🧭',settings:'🏕️',lectures:'📜',ai:'🔥',years:'📅',start:'🐪',results:'👑',progress:'🏹',location:'🧭',success:'🤎',error:'🦂',review:'📜',subject:'🏜️'},texts:{startExam:'🐪 Start Journey',resultsTitle:'Majlis Report',statsTitle:'🧭 إحصائيات الرحلة',settingsTitle:'🏕️ إعدادات الخيمة',examSettingsTitle:'🏕️ Exam Camp Settings',examSettingsButton:'🏕️ Exam Settings',trainingLabel:'Training Camp',examLabel:'Journey Exam'}},
@@ -61,7 +61,7 @@ function clampNum(v,min,max,fallback){ return Number.isNaN(v)?fallback:Math.min(
 function shuffleArray(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function formatDateTime(ts){ const d=new Date(ts); return d.toLocaleString('ar-EG'); }
 function formatDuration(ms){ const sec=Math.round((ms||0)/1000); const h=Math.floor(sec/3600), m=Math.floor((sec%3600)/60), s=sec%60; const parts=[]; if(h) parts.push(h+' ساعة'); if(m) parts.push(m+' دقيقة'); parts.push(s+' ثانية'); return parts.join(' '); }
-function stripOptionPrefix(text){ return String(text||'').replace(/^[A-E][\)\.\-]\s*/i,'').trim(); }
+function stripOptionPrefix(text){ return String(text||'').replace(/^\s*[A-Z]\s*[).\-]\s*/i,'').trim(); }
 function normalizeComparisonText(text){ return stripOptionPrefix(String(text||'').replace(/[\u200B-\u200D\uFEFF]/g,'').toLowerCase()).replace(/\s+/g,' ').trim(); }
 function isPageLine(line){ return /^Page\s*\(\s*\d+\s*\)\s*$/i.test(line); }
 function extractPageNumber(line){ const m=String(line||'').match(/^Page\s*\(\s*(\d+)\s*\)\s*$/i); return m?m[1]:''; }
@@ -71,46 +71,106 @@ function parseBatchNames(line){ return String(line||'').replace(/^Batch\s*:\s*/i
 function parseNoteText(line){ return String(line||'').replace(/^Note\s*:\s*/i,'').trim(); }
 function isMetadataLine(line){ return isPageLine(line) || isBatchLine(line) || isNoteLine(line); }
 function previewOption(option, idx){ return `${LETTERS[idx] || idx+1}) ${option}`; }
-function resolveCorrectIndex(options, correctAnswer, preferLetterOnly = false){
-  if(!Array.isArray(options)||!options.length) return -1;
-  const m=String(correctAnswer||'').match(/^([A-E])\s*[\)\.\-]\s*/i);
-  if(m){
-    const ix=m[1].toUpperCase().charCodeAt(0)-65;
-    if(ix>=0&&ix<options.length) return ix;
-  }
-  // إذا لم نجد حرفاً أو كان الحرف غير صالح، نستخدم المطابقة النصية
-  const ans=normalizeComparisonText(correctAnswer);
-  for(let i=0;i<options.length;i++){
-    const opt=normalizeComparisonText(options[i]);
-    if(opt && (opt===ans || opt.includes(ans) || ans.includes(opt))) return i;
-  }
-  return -1;
+function extractOptionLetter(value){
+  const match = String(value == null ? '' : value).trim().match(/^([A-Z])(?:\s*[).\-]|\s*$)/i);
+  return match ? match[1].toUpperCase() : '';
 }
+
+function getOptionLetters(q){
+  const options = Array.isArray(q.options) ? q.options : [];
+
+  if(Array.isArray(q.optionLetters)){
+    if(q.optionLetters.length !== options.length) return [];
+
+    const letters = q.optionLetters.map(value => String(value).trim().toUpperCase());
+
+    return letters.every(letter => /^[A-Z]$/.test(letter))
+      && new Set(letters).size === letters.length ? letters : [];
+  }
+
+  const prefixes = options.map(extractOptionLetter);
+
+  if(prefixes.length && prefixes.every(Boolean)){
+    return new Set(prefixes).size === prefixes.length ? prefixes : [];
+  }
+
+  return options.length <= LETTERS.length
+    ? options.map((option, index) => LETTERS[index])
+    : [];
+}
+
+function resolveCorrectIndex(options, correctAnswer, optionLetters){
+  if(!Array.isArray(options) || !options.length) return -1;
+
+  const letter = extractOptionLetter(correctAnswer);
+  const letters = getOptionLetters({ options, optionLetters });
+
+  return letter && letters.length === options.length ? letters.indexOf(letter) : -1;
+}
+
+function applyCorrectAnswerKey(q){
+  if(!q || !Array.isArray(q.options)) return q;
+
+  q.optionLetters = getOptionLetters(q);
+
+  const rawAnswer = String(
+    q.correctAnswer == null ? q.correctAnswerLetter || '' : q.correctAnswer
+  ).trim();
+
+  const parts = !q.isMultiple ? [rawAnswer]
+    : /^[A-Z](?:\s*\/\s*[A-Z])*$/i.test(rawAnswer)
+      ? rawAnswer.split('/')
+      : rawAnswer.split(/\s*\/\s*(?=[A-Z]\s*[).\-])/i);
+
+  const indices = parts.map(part => resolveCorrectIndex(q.options, part, q.optionLetters));
+
+  const valid = parts.length > 0
+    && indices.every(index => index >= 0)
+    && new Set(indices).size === indices.length;
+
+  q.correctIndex = !q.isMultiple && valid ? indices[0] : -1;
+  q.correctIndices = q.isMultiple && valid ? indices : [];
+  q.correctAnswerLetter = q.correctIndex >= 0 ? q.optionLetters[q.correctIndex] : '';
+
+  q.correctAnswerText = valid
+    ? indices.map(index => q.isMultiple
+      ? `${q.optionLetters[index]}) ${q.options[index]}`
+      : q.options[index]).join(' / ')
+    : '';
+
+  return q;
+}
+
 function getCorrectIndex(q){
-  if(typeof q.correctIndex==='number' && q.correctIndex>=0) return q.correctIndex;
-  // إذا كان لدينا حرف الإجابة الصحيحة، نستخدمه
-  if(q.correctAnswerLetter){
-    const letterIndex = q.correctAnswerLetter.charCodeAt(0) - 65;
-    if(letterIndex >= 0 && letterIndex < (q.options||[]).length){
-      q.correctIndex = letterIndex;
-      return letterIndex;
-    }
-  }
-  q.correctIndex=resolveCorrectIndex(q.options||[], q.correctAnswerText || q.correctAnswer || '');
-  return q.correctIndex;
+  applyCorrectAnswerKey(q);
+  return q && Number.isInteger(q.correctIndex) ? q.correctIndex : -1;
 }
-function isAnswerCorrect(q, idx){ return getCorrectIndex(q)===idx; }
-function getCorrectAnswerText(q){
-  if(q.correctAnswerText) return q.correctAnswerText;
-  // استخدام الحرف إن وجد
-  if(q.correctAnswerLetter){
-    const letterIndex = q.correctAnswerLetter.charCodeAt(0) - 65;
-    const opts = q.originalOptions || q.options || [];
-    if(letterIndex >= 0 && letterIndex < opts.length) return stripOptionPrefix(opts[letterIndex]);
+
+function isAnswerCorrect(q, answer){
+  if(!q) return false;
+
+  applyCorrectAnswerKey(q);
+
+  const validIndex = index =>
+    Number.isInteger(index) && index >= 0 && index < q.options.length;
+
+  if(q.isMultiple){
+    return Array.isArray(answer)
+      && q.correctIndices.length > 0
+      && answer.length === q.correctIndices.length
+      && answer.every(validIndex)
+      && new Set(answer).size === answer.length
+      && answer.every(index => q.correctIndices.includes(index));
   }
-  const idx = resolveCorrectIndex(q.originalOptions || q.options || [], q.correctAnswer || '');
-  if(idx>=0 && (q.originalOptions || q.options || [])[idx]) return stripOptionPrefix((q.originalOptions || q.options)[idx]);
-  return stripOptionPrefix(q.correctAnswer || '');
+
+  return validIndex(answer)
+    && q.correctIndex >= 0
+    && answer === q.correctIndex;
+}
+
+function getCorrectAnswerText(q){
+  applyCorrectAnswerKey(q);
+  return q && q.correctAnswerText ? q.correctAnswerText : '';
 }
 function getSubjectColor(subjectName){ const darkPalette=['#93c5fd','#86efac','#fcd34d','#c4b5fd','#fda4af','#67e8f9','#fdba74','#f9a8d4']; const lightPalette=['#1d4ed8','#15803d','#b45309','#7c3aed','#be123c','#0f766e','#9a3412','#9d174d']; const palette=isDarkTheme()?darkPalette:lightPalette; const subjects=sortSubjects(state.subjects).map(s=>s.name); const idx=Math.max(0, subjects.indexOf(subjectName)) % palette.length; return palette[idx]; }
 function formatHistorySubLabel(item){ if(!item || !item.groups || !item.groups.length) return item.sourceLabel || 'عام'; return item.groups.map(g=>g.type==='ai' ? `${g.name} (AI)` : g.name).join('، '); }
@@ -152,7 +212,17 @@ function getStatsSectionPalette(type){
     : { accent:'#1d4ed8', bg:'rgba(29,78,216,0.08)', text:'#ffffff', soft:'rgba(29,78,216,0.16)' });
 }
 function cleanOptionDisplay(text){ return String(text||'').replace(/\u200C+/g,''); }
-function getFormattedCurrentCorrectAnswer(q){ const idx = getCorrectIndex(q); if(idx < 0) return cleanOptionDisplay(getCorrectAnswerText(q) || q.correctAnswerText || q.correctAnswer || ''); return `${LETTERS[idx]}) ${cleanOptionDisplay(q.options[idx])}`; }
+function getFormattedCurrentCorrectAnswer(q){
+  applyCorrectAnswerKey(q);
+
+  if(q.isMultiple) return cleanOptionDisplay(q.correctAnswerText);
+
+  const idx = getCorrectIndex(q);
+
+  return idx < 0
+    ? ''
+    : `${q.optionLetters[idx]}) ${cleanOptionDisplay(q.options[idx])}`;
+}
 
 function loadJSON(key, fallback){ try{ return JSON.parse(localStorage.getItem(key)) || fallback; }catch{ return fallback; } }
 function saveSettings(){ localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify(state.settings)); }
@@ -1036,24 +1106,12 @@ function addExtraTime(){ const count=parseInt(el('question-count-input').value,1
 function confirmStartExam(){ try{ if(!state.selectedMode || !state.selectedDirection){ showToast('يرجى اختيار النمط واتجاه التنقل.','error'); return; } const count=parseInt(el('question-count-input').value,10); if(!count || count<1){ showToast('يرجى إدخال عدد صحيح من الأسئلة.','error'); return; } let questions=[]; const selectedGroupObjects=state.selectedGroups.map(idx=>state.currentGroups[idx]).filter(Boolean); const isYearsSection = (state.currentSelectionMeta && state.currentSelectionMeta.sectionType === 'years'); const hasFrequentGroup = selectedGroupObjects.some(g => g && g.isFrequentGroup); const shouldDedupe = isYearsSection && (selectedGroupObjects.length > 1 || hasFrequentGroup); if(shouldDedupe){ const seenIdentity = new Set(); selectedGroupObjects.forEach(g => { (g.questions||[]).forEach(q => { const key = getQuestionIdentityKey(q); if(!key){ questions.push(q); return; } if(seenIdentity.has(key)) return; seenIdentity.add(key); questions.push(q); }); }); } else { selectedGroupObjects.forEach(g => { if(Array.isArray(g.questions)) questions = questions.concat(g.questions); }); } if(!questions.length){ showToast('لا توجد أسئلة متاحة للبدء.','error'); return; } const historySubjectName=selectedGroupObjects[0]?.subjectName || state.currentSubject?.name || 'Unknown Subject'; const historyGroups=selectedGroupObjects.map(g=>({ name:g.name, type:g.type || state.currentSelectionMeta?.sectionType || 'lecture' })); const randomizedQuestions = shuffleArray(questions).slice(0, count).map(prepareQuestionForExam); startExamSession(randomizedQuestions, state.selectedMode, state.selectedDirection, state.currentSelectionMeta ? state.currentSelectionMeta.sectionType : 'custom', state.extraTime, { collectionType: state.currentSelectionMeta ? state.currentSelectionMeta.collectionType : null, displayLabel: state.currentSelectionMeta ? state.currentSelectionMeta.displayLabel : 'Exam', historySubjectName, historyGroups }); }catch(err){ console.error('confirmStartExam error', err); showToast('حدث خطأ عند بدء الامتحان ، تواصل مع فريق السنوات دفعة آل التاجي إن استمرت المشكلة.','error'); } }
 function prepareQuestionForExam(question){
   const clone = JSON.parse(JSON.stringify(question));
-  const baseOptions = (clone.options || []).map(opt => stripOptionPrefix(opt));
-  clone.originalOptions = baseOptions.slice();
-  clone.options = baseOptions.slice();
-  // استخدام الحرف المخزن إن وجد
-  if(clone.correctAnswerLetter){
-    const letterIndex = clone.correctAnswerLetter.charCodeAt(0) - 65;
-    if(letterIndex >= 0 && letterIndex < clone.options.length){
-      clone.correctIndex = letterIndex;
-      clone.correctAnswerText = clone.options[letterIndex];
-      clone.correctAnswer = clone.correctAnswerText;
-      return clone;
-    }
-  }
-  // خلاف ذلك نستخدم الطريقة القديمة
-  clone.correctAnswerText = getCorrectAnswerText({ ...clone, options: baseOptions, originalOptions: baseOptions.slice() });
-  clone.correctAnswer = clone.correctAnswerText;
-  clone.correctIndex = resolveCorrectIndex(clone.options, clone.correctAnswerText);
-  return clone;
+
+  clone.optionLetters = getOptionLetters(clone);
+  clone.options = Array.isArray(clone.options) ? clone.options.slice() : [];
+  clone.originalOptions = clone.options.slice();
+
+  return applyCorrectAnswerKey(clone);
 }
 
 function startExamSession(questions, mode, direction, sourceLabel, extraMinutes, meta) {
@@ -1248,7 +1306,20 @@ function renderExamLecturesList() {
 function renderRemoveWrongBtn(){ if(!state.currentExam || state.currentExam.collectionType!=='wrong' || state.currentExam.mode!=='training') return ''; const idx=state.currentExam.currentIndex; const q=state.currentExam.questions[idx]; const answered=state.currentExam.firstAnswers[idx]; if(answered===null || !isAnswerCorrect(q, answered) || !state.wrongQuestions.includes(q.id)) return ''; return `<button class="btn-secondary mt-20" onclick="confirmRemoveCurrentWrong()">✅ إزالة السؤال من الأخطاء</button>`; }
 function startSpecialExam(questions, mode, direction){ startExamSession(shuffleArray(questions.slice()).map(prepareQuestionForExam), mode, direction||'twoway', 'special', 5, { collectionType:null, displayLabel:'Special Exam', historySubjectName:'Special Exam', historyGroups:[] }); }
 
-function renderOptionButton(opt, i, idx, showAnswerState, selectedIndex, correctIdx){ let cls='option-btn'; if(selectedIndex===i) cls+=' selected'; if(showAnswerState){ if(i===correctIdx) cls+=' correct'; else if(selectedIndex===i && i!==correctIdx) cls+=' wrong'; } return `<button class="${cls}" onclick="selectOption(${i})"><span class="option-label">${LETTERS[i]})</span>${escapeHtml(cleanOptionDisplay(opt))}</button>`; }
+function renderOptionButton(opt, i, idx, showAnswerState, selectedIndex, correctIdx){
+  let cls = 'option-btn';
+
+  if(selectedIndex === i) cls += ' selected';
+
+  if(showAnswerState){
+    if(i === correctIdx) cls += ' correct';
+    else if(selectedIndex === i && i !== correctIdx) cls += ' wrong';
+  }
+
+  const letter = getOptionLetters(state.currentExam.questions[idx])[i];
+
+  return `<button class="${cls}" onclick="selectOption(${i})"><span class="option-label">${letter})</span>${escapeHtml(cleanOptionDisplay(opt))}</button>`;
+}
 function renderExam(){
   if(!state.currentExam) return;
 
@@ -1572,14 +1643,14 @@ function reviewExam(){
       statusLabel = ok ? (theme().icons.success+' Correct') : (theme().icons.error+' Wrong');
       statusColor = ok ? 'var(--success)' : 'var(--danger)';
     }
-    html += `<div class="question-container review-question-card mt-10" style="border-inline-start:4px solid ${isUnanswered ? 'var(--text-muted)' : (userAnswer===correctIdx ? 'var(--success)' : 'var(--danger)')};"><div class="question-header"><span class="question-number">Q${escapeHtml(q.number||String(idx+1))}</span><span style="color:${statusColor};font-weight:900;">${statusLabel}</span></div><p class="question-text">${escapeHtml(q.text)}</p><div class="options-list">${q.options.map((opt,i)=>{ let cls='option-btn'; if(i===correctIdx) cls+=' correct'; if(i===userAnswer && i!==correctIdx && !isUnanswered) cls+=' wrong'; return '<div class="'+cls+'" style="cursor:default;"><span class="option-label">'+LETTERS[i]+')</span>'+escapeHtml(cleanOptionDisplay(opt))+'</div>'; }).join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswer(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div></div>`;
-  });
+    html += `<div class="question-container review-question-card mt-10" style="border-inline-start:4px solid ${isUnanswered ? 'var(--text-muted)' : (userAnswer===correctIdx ? 'var(--success)' : 'var(--danger)')};"><div class="question-header"><span class="question-number">Q${escapeHtml(q.number||String(idx+1))}</span><span style="color:${statusColor};font-weight:900;">${statusLabel}</span></div><p class="question-text">${escapeHtml(q.text)}</p><div class="options-list">${q.options.map((opt,i)=>{ let cls='option-btn'; if(i===correctIdx) cls+=' correct'; if(i===userAnswer && i!==correctIdx && !isUnanswered) cls+=' wrong'; return '<div class="'+cls+'" style="cursor:default;"><span class="option-label">'+getOptionLetters(q)[i]+')</span>'+escapeHtml(cleanOptionDisplay(opt))+'</div>'; }).join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswer(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div></div>`;
+});
   reviewDiv.innerHTML=html;
 }
 
 function populateSearchFilter(){ const filter=el('search-filter'); if(!filter) return; filter.innerHTML='<option value="all">All Subjects</option>'; state.subjects.forEach(s=>{ filter.innerHTML += '<option value="'+escapeAttribute(s.id)+'">'+escapeHtml(s.name)+'</option>'; }); }
 function performSearch(){ const query=String(el('search-input').value||'').toLowerCase().trim(); const filter=el('search-filter').value; const resultsDiv=el('search-results'); if(query.length<2){ resultsDiv.innerHTML='<p style="color:var(--text-muted); text-align:center; padding:20px;">اكتب حرفين على الأقل للبحث...</p>'; return; } const t=theme(); const results=state.allQuestions.filter(q=>{ const text=[q.text,(q.options||[]).join(' '),q.explanation||'',q.batchName||'',q.lectureName||'',q.subjectName||''].join(' ').toLowerCase(); const matches=filter==='all'||q.subjectId===filter||slugify(q.subjectName)===filter; return text.includes(query) && matches; }); if(!results.length){ resultsDiv.innerHTML='<p style="color:var(--text-muted); text-align:center; padding:20px;">لا توجد نتائج مطابقة.</p>'; return; } resultsDiv.innerHTML=results.slice(0,60).map(q=>`<div class="search-result-item" onclick="openReadonly('${q.id}')"><p><strong>Q${escapeHtml(q.number||'?')}:</strong> ${escapeHtml(shortenText(q.text,140))}</p><div class="search-result-meta">${t.icons.subject} ${escapeHtml(q.subjectName||'')} · ${q.sourceType==='ai'?t.icons.ai:t.icons.lectures} ${escapeHtml(q.lectureName||'')} ${q.batchName?'· '+t.icons.years+' '+escapeHtml(q.batchName):''} ${isValidPageNumber(q.pageNumber)?'· '+t.icons.location+' '+escapeHtml(String(q.pageNumber).trim()):''}</div></div>`).join(''); }
-function openReadonly(questionId){ const q=state.allQuestions.find(item=>item.id===questionId); if(!q) return; const t=theme(); const correctIdx=getCorrectIndex(q); showScreen('readonly-screen'); const _pg = isValidPageNumber(q.pageNumber) ? String(q.pageNumber).trim() : ''; el('readonly-content').innerHTML=`<div class="question-header"><span class="question-number">Question ${escapeHtml(q.number||'?')}</span><div class="question-actions"><button class="icon-btn ${state.favorites.includes(q.id)?'active':''}" onclick="toggleFavorite('${q.id}'); openReadonly('${q.id}')">💚</button><button class="icon-btn" onclick="showLocation('${escapeJsString(q.subjectName)}','${escapeJsString(q.lectureName)}','${escapeJsString(q.batchName||'')}','${escapeJsString(_pg)}')">${t.icons.location}</button></div></div><p class="question-text">${escapeHtml(q.text)}</p><div class="options-list">${q.options.map((opt,i)=>'<div class="option-btn '+(i===correctIdx?'correct':'')+'" style="cursor:default;"><span class="option-label">'+LETTERS[i]+')</span>'+escapeHtml(cleanOptionDisplay(opt))+'</div>').join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswer(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div>`; el('readonly-content').classList.add('readonly-ltr'); }
+function openReadonly(questionId){ const q=state.allQuestions.find(item=>item.id===questionId); if(!q) return; const t=theme(); const correctIdx=getCorrectIndex(q); showScreen('readonly-screen'); const _pg = isValidPageNumber(q.pageNumber) ? String(q.pageNumber).trim() : ''; el('readonly-content').innerHTML=`<div class="question-header"><span class="question-number">Question ${escapeHtml(q.number||'?')}</span><div class="question-actions"><button class="icon-btn ${state.favorites.includes(q.id)?'active':''}" onclick="toggleFavorite('${q.id}'); openReadonly('${q.id}')">💚</button><button class="icon-btn" onclick="showLocation('${escapeJsString(q.subjectName)}','${escapeJsString(q.lectureName)}','${escapeJsString(q.batchName||'')}','${escapeJsString(_pg)}')">${t.icons.location}</button></div></div><p class="question-text">${escapeHtml(q.text)}</p><div class="options-list">${q.options.map((opt,i)=>'<div class="option-btn '+(i===correctIdx?'correct':'')+'" style="cursor:default;"><span class="option-label">'+getOptionLetters(q)[i]+')</span>'+escapeHtml(cleanOptionDisplay(opt))+'</div>').join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswer(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div>`; el('readonly-content').classList.add('readonly-ltr'); }
 function closeReadonly(){ if(el('search-input') && el('search-input').value) showScreen('search-screen'); else goHome(); }
 
 function toggleFavorite(questionId){ const idx=state.favorites.indexOf(questionId); if(idx>-1) state.favorites.splice(idx,1); else state.favorites.push(questionId); saveFavorites(); if(state.currentExam && !state.currentExam.submitted) renderExam(); if(el('readonly-screen').classList.contains('active')) openReadonly(questionId); if(state.browseMode==='favorites') renderSubjects(); updateStatisticsIfOpen(); }
@@ -1946,7 +2017,20 @@ function checkResumeExam() {
       confirmText: 'نعم أريد إكمال ذاك الامتحان',
       cancelText: 'لا (ستفقد بيانات التقدم لذاك الامتحان)',
       onConfirm: () => {
+                saved.questions = saved.questions.map(question => {
+          const source = state.allQuestions.find(item => item.id === question.id);
+          const restored = Object.assign({}, question);
+
+          if(source){
+            restored.correctAnswer = source.correctAnswer;
+            restored.optionLetters = getOptionLetters(source);
+          }
+
+          return prepareQuestionForExam(restored);
+        });
+
         state.currentExam = saved;
+        saveExamState();
         showScreen('exam-screen');
         renderExam();
         if (state.currentExam.mode === 'exam') startTimer();
@@ -1961,44 +2045,161 @@ function checkResumeExam() {
 }
 
 function normalizeText(text){ return String(text||'').replace(/^\uFEFF/,'').replace(/\r\n/g,'\n').replace(/\r/g,'\n').replace(/\t/g,'    ').replace(/\/\/\/\/\/\/\/\//g,'\n').trim(); }
-function parseQuestionFile(raw, meta){ const text=normalizeText(raw); if(!text) return []; let blocks=text.split(/(?:^|\n)\s*###\s*(?=\n|$)/g).map(x=>x.trim()).filter(Boolean); if(blocks.length<=1){ const paragraphs=text.split(/\n{2,}/).map(x=>x.trim()).filter(Boolean); if(paragraphs.length<=1) blocks=[text]; else { blocks=[]; let current=[]; let hasCorrect=false; for(let i=0;i<paragraphs.length;i++){ const p=paragraphs[i]; const first=(p.split('\n').find(l=>l.trim())||'').trim(); const looksNew=current.length>0 && hasCorrect && !/^(Correct\s*Answer|Explanation)\s*:/i.test(first) && !/^[A-E][\)\.\-]/.test(first) && !isPageLine(first); if(looksNew){ blocks.push(current.join('\n\n').trim()); current=[]; hasCorrect=false; } current.push(p); if(/^\s*Correct\s*Answer\s*:/im.test(p)) hasCorrect=true; if(i===paragraphs.length-1 && current.length) blocks.push(current.join('\n\n').trim()); } } }
-  const questions=[]; let fallback=meta.startCounter||1;
-  for(let blockIndex=0; blockIndex<blocks.length; blockIndex++){
-        const lines=blocks[blockIndex].split('\n').map(l=>l.trim()).filter(Boolean); if(!lines.length || !lines.some(l=>/^Correct\s*Answer\s*:/i.test(l))) continue; let questionNumber=''; let questionText=''; let options=[]; let correctAnswer=''; let correctAnswerLetter=''; let explanation=''; let batchName=''; let batchNames=[]; let note=''; let pageNumber=''; let startIndex=0; const head=(lines[0]||'').match(/^Question\s*(\d+)\s*[:\-.]?\s*(.*)$/i); if(head){ questionNumber=head[1]||''; if(head[2]) lines[0]=head[2].trim(); else startIndex=1; } const ansIdx=lines.findIndex(l=>/^Correct\s*Answer\s*:/i.test(l)); if(ansIdx===-1) continue; const before=lines.slice(startIndex, ansIdx); const firstOpt=before.findIndex(l=>/^[A-E][\)\.\-]\s*/i.test(l)); if(firstOpt===-1) continue; questionText=before.slice(0,firstOpt).join(' ').trim() || ('Question '+fallback); options=before.slice(firstOpt).filter(l=>/^[A-E][\)\.\-]\s*/i.test(l)).map(stripOptionPrefix); correctAnswer=lines[ansIdx].replace(/^Correct\s*Answer\s*:\s*/i,'').trim();
-    // استخراج حرف الإجابة الصحيحة (A-E)
-    const letterMatch = correctAnswer.match(/^([A-E])\s*[\)\.\-]\s*/i);
-    if(letterMatch) correctAnswerLetter = letterMatch[1].toUpperCase();
-    else correctAnswerLetter = '';
-    let i=ansIdx+1; if(i<lines.length && /^Explanation\s*:/i.test(lines[i])){ const exp=[]; const first=lines[i].replace(/^Explanation\s*:\s*/i,'').trim(); if(first) exp.push(first); i++; while(i<lines.length && !isMetadataLine(lines[i])){ exp.push(lines[i]); i++; } explanation=exp.join(' ').trim(); } while(i<lines.length){ const line=lines[i]; if(isPageLine(line)) pageNumber=extractPageNumber(line); else if(isBatchLine(line)){ batchNames=batchNames.concat(parseBatchNames(line)); batchName=batchNames.join(' / '); } else if(isNoteLine(line)) note=parseNoteText(line); else if(!explanation && !/^Explanation\s*:/i.test(line)) explanation=[explanation,line].filter(Boolean).join(' ').trim(); i++; } if(!questionNumber) questionNumber=String(fallback);
-    // تحديد الإجابة الصحيحة باستخدام الحرف أولاً
-    let correctIndex = -1;
-    let correctAnswerText = '';
-    if(correctAnswerLetter){
-      const letterIndex = correctAnswerLetter.charCodeAt(0) - 65;
-      if(letterIndex >= 0 && letterIndex < options.length){
-        correctIndex = letterIndex;
-        correctAnswerText = options[letterIndex];
-      }
-    }
-    if(correctIndex === -1){
-      // فشل في استخدام الحرف، نستخدم الطريقة النصية القديمة
-      const possibleIndex = resolveCorrectIndex(options, correctAnswer);
-      if(possibleIndex >= 0 && options[possibleIndex]){
-        correctIndex = possibleIndex;
-        correctAnswerText = options[possibleIndex];
-      } else {
-        correctAnswerText = stripOptionPrefix(correctAnswer);
-        // نحاول مرة أخرى مع النص المجرد
-        const fallbackIndex = resolveCorrectIndex(options, correctAnswerText);
-        if(fallbackIndex >= 0 && options[fallbackIndex]){
-          correctIndex = fallbackIndex;
-          correctAnswerText = options[fallbackIndex];
+function parseQuestionFile(raw, meta){
+  const text = normalizeText(raw);
+  if(!text) return [];
+
+  let blocks = text.split(/(?:^|\n)\s*###\s*(?=\n|$)/g)
+    .map(value => value.trim())
+    .filter(Boolean);
+
+  if(blocks.length <= 1){
+    const paragraphs = text.split(/\n{2,}/)
+      .map(value => value.trim())
+      .filter(Boolean);
+
+    if(paragraphs.length <= 1) blocks = [text];
+    else {
+      blocks = [];
+      let current = [];
+      let hasCorrect = false;
+
+      paragraphs.forEach((paragraph, index) => {
+        const first = (paragraph.split('\n').find(line => line.trim()) || '').trim();
+
+        const looksNew = current.length > 0 && hasCorrect
+          && !/^(Correct\s*Answer|Explanation)\s*:/i.test(first)
+          && !/^[A-Z]\s*[).\-]/i.test(first)
+          && !isMetadataLine(first);
+
+        if(looksNew){
+          blocks.push(current.join('\n\n').trim());
+          current = [];
+          hasCorrect = false;
         }
-      }
+
+        current.push(paragraph);
+
+        if(/^\s*Correct\s*Answer\s*:/im.test(paragraph)) hasCorrect = true;
+
+        if(index === paragraphs.length - 1 && current.length){
+          blocks.push(current.join('\n\n').trim());
+        }
+      });
     }
-    const id=[slugify(meta.subjectName),slugify(meta.sourceType),slugify(meta.lectureName),slugify(questionNumber),hashString(questionText).slice(0,10)].join('__');
-             const finalPageNumber = (/^\d+$/.test(String(pageNumber||'').trim())) ? String(pageNumber).trim() : '';
-        questions.push({id,number:questionNumber,text:questionText,options,originalOptions:options.slice(),correctAnswer,correctAnswerText,correctIndex,correctAnswerLetter,explanation,batchName,batchNames,note,pageNumber:finalPageNumber,subjectName:meta.subjectName,subjectId:meta.subjectId||slugify(meta.subjectName),lectureName:meta.lectureName,groupName:meta.lectureName,sourceType:meta.sourceType,sourcePath:meta.sourcePath}); fallback++; }
+  }
+
+  const questions = [];
+  let fallback = meta.startCounter || 1;
+
+  for(const block of blocks){
+    const lines = block.split('\n').map(line => line.trim()).filter(Boolean);
+
+    const multiIndex = lines.indexOf('~Choose the correct answers~');
+    const isMultiple = multiIndex !== -1;
+
+    if(isMultiple) lines.splice(multiIndex, 1);
+
+    let questionNumber = '';
+    let startIndex = 0;
+
+    const head = (lines[0] || '').match(/^Question\s*(\d+)\s*[:\-.]?\s*(.*)$/i);
+
+    if(head){
+      questionNumber = head[1] || '';
+
+      if(head[2]) lines[0] = head[2].trim();
+      else startIndex = 1;
+    }
+
+    const ansIndex = lines.findIndex(line => /^Correct\s*Answer\s*:/i.test(line));
+    if(ansIndex < 0) continue;
+
+    const before = lines.slice(startIndex, ansIndex);
+    const firstOption = before.findIndex(line => /^[A-Z]\s*[).\-]\s*/i.test(line));
+    if(firstOption < 0) continue;
+
+    const questionText = before.slice(0, firstOption).join(' ').trim()
+      || ('Question ' + fallback);
+
+    const optionLines = before.slice(firstOption)
+      .filter(line => /^[A-Z]\s*[).\-]\s*/i.test(line));
+
+    const optionLetters = optionLines.map(extractOptionLetter);
+    const options = optionLines.map(stripOptionPrefix);
+
+    const correctAnswer = lines[ansIndex]
+      .replace(/^Correct\s*Answer\s*:\s*/i, '')
+      .trim();
+
+    let explanation = '';
+    let batchNames = [];
+    let note = '';
+    let pageNumber = '';
+    let index = ansIndex + 1;
+
+    if(index < lines.length && /^Explanation\s*:/i.test(lines[index])){
+      const parts = [];
+      const first = lines[index].replace(/^Explanation\s*:\s*/i, '').trim();
+
+      if(first) parts.push(first);
+      index++;
+
+      while(index < lines.length && !isMetadataLine(lines[index])){
+        parts.push(lines[index++]);
+      }
+
+      explanation = parts.join(' ').trim();
+    }
+
+    while(index < lines.length){
+      const line = lines[index++];
+
+      if(isPageLine(line)) pageNumber = extractPageNumber(line);
+      else if(isBatchLine(line)) batchNames = batchNames.concat(parseBatchNames(line));
+      else if(isNoteLine(line)) note = parseNoteText(line);
+      else if(!explanation && !/^Explanation\s*:/i.test(line)) explanation = line;
+    }
+
+    if(!questionNumber) questionNumber = String(fallback);
+
+    const id = [
+      slugify(meta.subjectName),
+      slugify(meta.sourceType),
+      slugify(meta.lectureName),
+      slugify(questionNumber),
+      hashString(questionText).slice(0,10)
+    ].join('__');
+
+    const finalPageNumber = /^\d+$/.test(String(pageNumber).trim())
+      ? String(pageNumber).trim()
+      : '';
+
+    questions.push(applyCorrectAnswerKey({
+      id,
+      number: questionNumber,
+      text: questionText,
+      options,
+      optionLetters,
+      originalOptions: options.slice(),
+      correctAnswer,
+      isMultiple,
+      explanation,
+      batchName: batchNames.join(' / '),
+      batchNames,
+      note,
+      pageNumber: finalPageNumber,
+      subjectName: meta.subjectName,
+      subjectId: meta.subjectId || slugify(meta.subjectName),
+      lectureName: meta.lectureName,
+      groupName: meta.lectureName,
+      sourceType: meta.sourceType,
+      sourcePath: meta.sourcePath
+    }));
+
+    fallback++;
+  }
+
   return questions;
 }
 
@@ -2009,11 +2210,13 @@ function normalizeImportedQuestion(question, subject, group, fallbackSourceType)
   q.lectureName = q.lectureName || q.groupName || (group && group.name) || '';
   q.groupName = q.groupName || q.lectureName || (group && group.name) || '';
   q.sourceType = q.sourceType || fallbackSourceType || 'lecture';
-  q.options = Array.isArray(q.options) ? q.options.map(opt => stripOptionPrefix(opt)) : [];
-  q.originalOptions = Array.isArray(q.originalOptions) && q.originalOptions.length ? q.originalOptions.map(opt => stripOptionPrefix(opt)) : q.options.slice();
-  q.correctAnswerText = q.correctAnswerText || getCorrectAnswerText(q);
-  q.correctAnswer = q.correctAnswer || q.correctAnswerText;
-  q.correctIndex = resolveCorrectIndex(q.options, q.correctAnswerText || q.correctAnswer || '');
+    q.optionLetters = getOptionLetters(q);
+  q.options = Array.isArray(q.options) ? q.options.slice() : [];
+  q.originalOptions = Array.isArray(q.originalOptions) && q.originalOptions.length
+    ? q.originalOptions.slice()
+    : q.options.slice();
+
+  applyCorrectAnswerKey(q);
   if(!q.id){
     q.id = [slugify(q.subjectName), slugify(q.sourceType), slugify(q.lectureName || q.batchName || 'group'), slugify(q.number || 'q'), hashString(q.text || '').slice(0,10)].join('__');
   }
