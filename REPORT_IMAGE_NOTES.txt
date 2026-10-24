@@ -1,0 +1,96 @@
+QUESTION REPORT IMAGE UPDATE
+
+Modified existing files:
+- index.html
+- script.js
+- style.css
+Added files:
+- question-report.js (local PNG renderer)
+- REPORT_IMAGE_NOTES.txt (this implementation and verification record)
+
+WHAT CHANGED
+The existing reporting checkboxes and initial الإبلاغ button are retained. At least one category is required. Submitting snapshots the reported question, generates the complete report locally and previews the PNG(s). Only successful generation reveals the exact button إرسال إلى فريق السنوات. No Telegram navigation, upload or sharing is triggered during generation. Changing categories, closing the dialog or opening another report clears old image URLs and invalidates asynchronous results.
+
+IMAGE GENERATION
+Uses the native browser Canvas 2D API and PNG toBlob; no new production dependencies or external image services. Arabic is shaped by the browser with paragraph direction detection and full-line Unicode bidi, keeping English medical terminology. It waits for available site fonts, with system font fallbacks for offline use. Category wording and DOM display order are copied exactly, joined by ' / '. The question snapshot supplies subjectName, lectureName, text, options, optionLetters, answer and explanation. The existing correct-answer helper is applied only to the snapshot; multi-answer and nonsequential option labels are supported. Missing subject/lecture metadata is explicitly marked unavailable rather than guessed. Absent answer/explanation sections are omitted.
+
+Images are 1080px wide, dynamically sized up to 2000px tall, using 36px body text rather than shrinking long content. Overflow becomes sequential PNGs, repeating report categories, question number (when present), page count and continued section labels. Normal content fits one image when possible. Word/grapheme measurement, long-token splitting and conservative page margins avoid clipping. The site theme's accent color is retained over an opaque high-contrast light background.
+
+TELEGRAM WORKFLOW — NOT AUTOMATIC DELIVERY
+Configured destination: https://t.me/dkdkdn8rnru7
+The public bot URL is the TELEGRAM_REPORT_BOT_URL constant at the top of script.js. There are no bot tokens, token placeholders, credentials or server integration in the website.
+
+On a secure origin with file-capable Web Share support, pressing إرسال إلى فريق السنوات immediately passes actual PNG File objects to navigator.share({files}), after navigator.canShare({files}). The user must choose Telegram, select the intended bot (not an unrelated chat) if available, and confirm Send. The website cannot force an app or recipient, attach a file via the bot URL itself, or verify which destination the user chose. Promise resolution is NOT presented as delivery confirmation. If necessary, start the bot first using its link. Multi-image reports support batch sharing and a separate share action for each image if the platform rejects a batch.
+
+For browsers/platforms without native image sharing, the same button opens an explicit manual workflow. Use حفظ الصورة under EACH PNG, then فتح البوت لإرفاق الصور المحفوظة, press Start/بدء if required, attach the saved PNG(s) with Telegram's attachment control and confirm Send. The bot link alone transfers no images. On mobile, if an image opens instead of downloading, long-press it to save. All generated files remain available for download after share cancellation or permission errors. Opening Telegram never silently substitutes a text-only link for a report image.
+
+DEPLOYMENT / LIMITATIONS
+Deploy all files to the existing website in its original structure, including the new question-report.js. No production npm install or build step is required. Keep existing question data and normal site configuration. Use HTTPS for native file sharing (localhost is suitable for development). An embedding page must not block the web-share permission policy. Telegram must be installed/available as an OS sharing target for the native flow; otherwise manual attachments work with Telegram Desktop/Web/mobile. The supplied account must actually be the intended bot and must accept images; its ownership, identity and backend processing have not been verified here.
+
+The uploaded ZIP contains no question TXT/JSON files or audio files; it contains the existing site loader/generator, scripts, styles, image asset and GitHub workflow. Those contents are preserved; external/repository question data must remain in its existing hosting location. Test questions were injected only into intercepted test responses, never added to the production archive.
+
+If deterministic one-recipient submission without native target selection is required, a public bot URL alone is insufficient. A minimal optional architecture is an authenticated, rate-limited upload endpoint with temporary storage plus a bot-side /start handler that retrieves a report by a short opaque ID from the same server and routes its images to the configured reviewer chat. That requires cooperation/access to the actual bot backend, configured reviewer chat permissions, server-only bot credentials, expiry/deletion and abuse controls. It is NOT implemented, created or configured in this static-site update. It must not be confused with sending a local file to a bot using only t.me or putting a Bot API token in browser JavaScript.
+
+VERIFICATION SCOPE
+Automated tests use real browser PNG generation and image decoding. Native share methods are stubbed at the OS boundary to inspect real File bytes, cancellation and unsupported capabilities. They are not actual Telegram delivery tests. Tested headless Chromium and WebKit on Linux with synthetic question fixtures, including desktop/tablet/mobile viewport sizes. WebKit testing is not physical Safari/iPad/iPhone testing. Generated Arabic/English PNG output was also visually inspected. Other production content and every existing feature were not exhaustively end-to-end tested; unrelated source files are byte-for-byte preserved, and scoped regression smoke tests cover answer selection, navigation, favorites/persistence and the presence of Note/Eshrahly/source controls.
+
+Reference documentation:
+https://core.telegram.org/widgets/share
+https://core.telegram.org/bots/features
+https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
+
+AUTOMATED CHECKS
+
+CHROMIUM: 24 checks passed; uncaught page errors: 0.
+1. PASS: No category: validation, no images/share
+2. PASS: One category: complete actual question, nonsequential labels, answer, explanation, exact source; no auto share
+3. PASS: Share receives real PNG File bytes, not links, and never claims bot delivery
+4. PASS: Manual fallback downloads a valid report PNG
+5. PASS: Multiple categories retain displayed order, not selection order
+6. PASS: Category change invalidates stale image/files immediately
+7. PASS: Snapshot binds report to original question across current-question changes
+8. PASS: Multiple-correct-answer report uses existing answer helper
+9. PASS: Missing optional metadata/answer/explanation handled without fabrication
+10. PASS: Generation failure clears stale previews and hides sharing
+11. PASS: Long content paginates into 6 readable images; all repeated lines/end marker/long token retained, no canvas overflows
+12. PASS: All sequential PNGs included in batch sharing
+13. PASS: Batch-not-supported fallback plus individual image sharing
+14. PASS: Unsupported file sharing keeps downloads and exact target bot link; no fake attachment
+15. PASS: Cancelled share retains files and allows retry
+16. PASS: Denied sharing permission exposes honest manual fallback
+17. PASS: Responsive page and report dialog fit 320×640
+18. PASS: Responsive page and report dialog fit 375×812
+19. PASS: Responsive page and report dialog fit 768×1024
+20. PASS: Responsive page and report dialog fit 1024×768
+21. PASS: Responsive page and report dialog fit 1440×900
+22. PASS: Closing during generation cancels stale async result and frees files
+23. PASS: Original answer selection, navigation, favorites/persistence and Note/Eshrahly/source controls remain available
+24. PASS: No uncaught browser JavaScript errors
+
+WEBKIT: 24 checks passed; uncaught page errors: 0.
+1. PASS: No category: validation, no images/share
+2. PASS: One category: complete actual question, nonsequential labels, answer, explanation, exact source; no auto share
+3. PASS: Share receives real PNG File bytes, not links, and never claims bot delivery
+4. PASS: Manual fallback downloads a valid report PNG
+5. PASS: Multiple categories retain displayed order, not selection order
+6. PASS: Category change invalidates stale image/files immediately
+7. PASS: Snapshot binds report to original question across current-question changes
+8. PASS: Multiple-correct-answer report uses existing answer helper
+9. PASS: Missing optional metadata/answer/explanation handled without fabrication
+10. PASS: Generation failure clears stale previews and hides sharing
+11. PASS: Long content paginates into 6 readable images; all repeated lines/end marker/long token retained, no canvas overflows
+12. PASS: All sequential PNGs included in batch sharing
+13. PASS: Batch-not-supported fallback plus individual image sharing
+14. PASS: Unsupported file sharing keeps downloads and exact target bot link; no fake attachment
+15. PASS: Cancelled share retains files and allows retry
+16. PASS: Denied sharing permission exposes honest manual fallback
+17. PASS: Responsive page and report dialog fit 320×640
+18. PASS: Responsive page and report dialog fit 375×812
+19. PASS: Responsive page and report dialog fit 768×1024
+20. PASS: Responsive page and report dialog fit 1024×768
+21. PASS: Responsive page and report dialog fit 1440×900
+22. PASS: Closing during generation cancels stale async result and frees files
+23. PASS: Original answer selection, navigation, favorites/persistence and Note/Eshrahly/source controls remain available
+24. PASS: No uncaught browser JavaScript errors
+
+Real Telegram delivery: NOT TESTED. No claim of automatic or verified delivery is made.
