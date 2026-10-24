@@ -1,0 +1,2590 @@
+[
+  {
+    "id": "forensic",
+    "name": "Forensic",
+    "lectures": [
+      {
+        "id": "forensic__lecture__asphyxia",
+        "name": "Asphyxia",
+        "type": "lecture",
+        "subjectName": "Forensic",
+        "path": "Forensic/Asphyxia.txt",
+        "questions": [
+          {
+            "id": "forensic__lecture__asphyxia__1__4zwz16",
+            "number": "1",
+            "text": "Burking is:",
+            "options": [
+              "Throttling only",
+              "Traumatic asphyxia + smothering",
+              "Hanging + drowning",
+              "Gagging only"
+            ],
+            "originalOptions": [
+              "Throttling only",
+              "Traumatic asphyxia + smothering",
+              "Hanging + drowning",
+              "Gagging only"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Traumatic asphyxia + smothering",
+            "correctAnswerText": "Traumatic asphyxia + smothering",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Burking combines compression of the chest (traumatic asphyxia) with closure of the nose and mouth (smothering). This is the Burke and Hare method.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Burking is a homicidal method that joins two mechanisms. The killer kneels or sits on the victim's chest while closing the nose and mouth with a hand (Burke and Hare, Edinburgh 1828). It may leave few external signs. Smothering by itself rarely produces petechiae, significant cyanosis or congestion unless the victim struggles. Traumatic asphyxia, in contrast, produces dramatic congestion and petechiae.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Mechanism</th><th>What happens</th><th>Typical manner</th></tr>\n</thead>\n<tbody>\n<tr><td>Traumatic asphyxia</td><td>A heavy weight presses on the chest or upper abdomen and makes respiration impossible. Findings: congestion, cyanosis, petechiae, a line of demarcation.</td><td>Mostly accidental, may be homicidal</td></tr>\n<tr><td>Smothering</td><td>The external respiratory openings are occluded by a hand or soft objects.</td><td>Homicidal or accidental</td></tr>\n<tr><td>Burking</td><td>Traumatic asphyxia and smothering together.</td><td>Homicidal</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__2__ko26jz",
+            "number": "2",
+            "text": "The most common cause of inward (central) hyoid bone fracture is:",
+            "options": [
+              "Hanging",
+              "Throttling",
+              "Strangulation by ligature",
+              "Burking"
+            ],
+            "originalOptions": [
+              "Hanging",
+              "Throttling",
+              "Strangulation by ligature",
+              "Burking"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Throttling",
+            "correctAnswerText": "Throttling",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Throttling (manual strangulation) is the most common cause of hyoid bone fracture, and the fracture is inward.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Throttling is constriction of the neck by the hand. The direct, forceful and repeated finger pressure damages the deep neck structures. Its findings are multiple contusions and fingernail abrasions on the neck, inward fracture of the hyoid and of the thyroid cartilage, and contusions of the deep tissues of the neck. Throttling is homicidal by definition, because grip relaxes as consciousness is lost.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Form of neck compression</th><th>Internal neck findings</th></tr>\n</thead>\n<tbody>\n<tr><td>Throttling</td><td>Inward hyoid fracture (the most common cause of hyoid fracture), thyroid cartilage fracture, deep muscle bruising</td></tr>\n<tr><td>Ligature strangulation</td><td>Inward hyoid fracture, possible thyroid cartilage fracture, contusions and lacerations of neck muscles</td></tr>\n<tr><td>Ordinary (suicidal) hanging</td><td>Usually little internal damage</td></tr>\n<tr><td>Judicial long-drop hanging</td><td>Extensive neck laceration, torn sternomastoids, fracture-dislocation of C2–C3</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__3__lazqqq",
+            "number": "3",
+            "text": "Which method of asphyxia shows MOST severe internal neck damage:",
+            "options": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Throttling",
+              "Strangulation"
+            ],
+            "originalOptions": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Throttling",
+              "Strangulation"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "C) Throttling",
+            "correctAnswerText": "Throttling",
+            "correctIndex": 2,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "C",
+            "explanation": "Throttling involves direct, forceful, repeated finger pressure, which causes extensive deep-muscle bruising and fractures of the hyoid and thyroid cartilage. Ordinary hanging usually causes little internal damage.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The amount of internal damage follows how the force is applied. In throttling the hand grips the neck directly. This explains the deep contusions and the cartilage and hyoid fractures. In ordinary hanging the body's own weight acts through a ligature, and internal damage is usually minimal. Massive damage in a hanging suggests a judicial long drop. The cause of death also differs between the forms.\n\nThrottling causes death by:\n- mechanical anoxia\n- reflex cardiac inhibition\n- cerebral anoxia\n- delayed glottic oedema and choking\n\nHanging causes death mainly by cerebral ischaemia from carotid compression, with vagal cardiac inhibition and mechanical anoxia also contributing. Severe internal neck injury should therefore point first to throttling, or to a judicial hanging.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__4__2xjbcl",
+            "number": "4",
+            "text": "Which one causes severe damage to internal neck structures:",
+            "options": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Throttling"
+            ],
+            "originalOptions": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Throttling"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correctAnswer": "C) Throttling",
+            "correctAnswerText": "Throttling",
+            "correctIndex": 2,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "C",
+            "explanation": "Throttling produces extensive deep-muscle bruising and fractures of the hyoid and thyroid cartilage. Ordinary hanging, complete or incomplete, usually causes little internal damage.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Complete and incomplete hanging are both suspension of the body from the neck by a ligature. They differ in how much of the body weight is carried by the ligature, not in the amount of internal injury.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Body weight</td><td>Fully suspended, feet off the ground</td><td>Partly suspended, feet or knees may touch the ground</td></tr>\n<tr><td>Main cause of death</td><td>Cerebral ischaemia</td><td>Asphyxia</td></tr>\n<tr><td>Face</td><td>Less congested, sometimes pale</td><td>Markedly congested</td></tr>\n<tr><td>Internal neck damage</td><td colspan=\"2\">Usually little in ordinary hanging. Massive damage means judicial long-drop hanging.</td></tr>\n</tbody>\n</table>\n\nThrottling is the form in which deep neck tissues and cartilages are directly crushed by fingers.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__5__ccfwfk",
+            "number": "5",
+            "text": "The findings on the neck: extensive laceration, tears in sternomastoid and fracture-dislocation of C2-C3 vertebrae. These findings are present in:",
+            "options": [
+              "Suicidal hanging",
+              "Accidental hanging",
+              "Incomplete hanging",
+              "Judicial hanging",
+              "Autoerotic hanging"
+            ],
+            "originalOptions": [
+              "Suicidal hanging",
+              "Accidental hanging",
+              "Incomplete hanging",
+              "Judicial hanging",
+              "Autoerotic hanging"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "correctAnswer": "D) Judicial hanging",
+            "correctAnswerText": "Judicial hanging",
+            "correctIndex": 3,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "D",
+            "explanation": "Extensive neck lacerations, torn sternomastoids and C2–C3 fracture-dislocation (hangman's fracture) with cord transection are the picture of judicial (long-drop) hanging. Ordinary hanging usually causes little internal damage.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Judicial (long-drop) hanging is the form in which the cause of death is transection of the spinal cord, and death is instant. The characteristic findings are extensive neck lacerations, torn sternomastoid muscles, and fracture-dislocation of C2–C3, the \"hangman's fracture\" of C2 (a bilateral pars-articularis fracture). This differs from the other forms of hanging. In suicidal, accidental, incomplete and autoerotic hanging, the neck usually shows only a ligature mark, and death is mainly from cerebral ischaemia, vagal inhibition or mechanical anoxia.\n\nAutoerotic (sexual) asphyxia is usually by hanging, with anoxia induced deliberately to heighten arousal. It can resemble a suicidal hanging, but it does not produce this destructive neck injury.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__6__5mke3s",
+            "number": "6",
+            "text": "Ligature mark of strangulation characteristics:",
+            "options": [
+              "Horizontal, low, complete",
+              "Horizontal, low, incomplete",
+              "Oblique, high, complete",
+              "Oblique, high, incomplete"
+            ],
+            "originalOptions": [
+              "Horizontal, low, complete",
+              "Horizontal, low, incomplete",
+              "Oblique, high, complete",
+              "Oblique, high, incomplete"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Horizontal, low, complete",
+            "correctAnswerText": "Horizontal, low, complete",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "A ligature strangulation mark is transverse (horizontal), low (below the thyroid cartilage) and complete (encircles the whole neck). Hanging is the opposite: oblique, high and incomplete.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "In strangulation, the constricting force comes from the ligature itself, and it is applied evenly around the neck. In hanging, the body weight pulls the ligature upward toward the suspension point.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature of the ligature mark</th><th>Hanging (incomplete)</th><th>Ligature strangulation</th></tr>\n</thead>\n<tbody>\n<tr><td>Level</td><td>High, above the thyroid cartilage</td><td>Low, below the thyroid cartilage</td></tr>\n<tr><td>Direction</td><td>Oblique</td><td>Transverse</td></tr>\n<tr><td>Continuity</td><td>Incomplete (does not encircle the neck)</td><td>Complete (encircles the neck)</td></tr>\n<tr><td>Depth</td><td>Deep, fading gradually toward the suspension point</td><td>Deep all through</td></tr>\n</tbody>\n</table>\n\nThe mark may show the shape of the ligating material, as a crush abrasion with a parchment-like quality. It is less visible with thick hair, a high collar, or a broad, soft ligature. It is more visible with a thin, rough, wire or metal ligature and with a longer duration of constriction.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__7__3fnetc",
+            "number": "7",
+            "text": "Strangulation with ligature:",
+            "options": [
+              "Transverse, complete rope marks",
+              "Associated with multiple lines on the neck",
+              "Marks are high in the neck",
+              "Same as hanging"
+            ],
+            "originalOptions": [
+              "Transverse, complete rope marks",
+              "Associated with multiple lines on the neck",
+              "Marks are high in the neck",
+              "Same as hanging"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Transverse, complete rope marks",
+            "correctAnswerText": "Transverse, complete rope marks",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Ligature strangulation produces transverse, complete marks low in the neck. This is the reverse of hanging, whose marks are high, oblique and incomplete.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Ligature strangulation is mechanical anoxic death caused by constriction of the neck by a ligature that occludes the air passages from outside. The constricting force is not the body's own suspended weight, which is the difference from hanging.\n\nCauses of death:\n- mechanical anoxia\n- reflex cardiac inhibition\n- delayed oedema of the glottis and choking, which can kill even some time after the ligature has been removed\n\nOther findings:\n- abrasions and contusions taking the shape of the ligating material\n- inward fracture of the hyoid, possibly of the thyroid cartilage\n- contusions and lacerations of neck muscles\n\nThe manner is homicidal or accidental, but not suicidal. A person cannot maintain ligature pressure on their own neck after losing consciousness. Any ligature mark on the neck is presumed to be homicide (strangulation) until proven otherwise.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__8__dur955",
+            "number": "8",
+            "text": "Abrasions found on the neck are always considered what until proved otherwise?",
+            "options": [
+              "Hanging",
+              "Strangulation",
+              "Asphyxia",
+              "Drowning"
+            ],
+            "originalOptions": [
+              "Hanging",
+              "Strangulation",
+              "Asphyxia",
+              "Drowning"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Strangulation",
+            "correctAnswerText": "Strangulation",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Neck marks are presumed to be strangulation (homicide) until proven otherwise. This is the reverse default of hanging, which is more often self-inflicted.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Location matters in interpreting abrasions. An abrasion pattern on the neck raises suspicion for throttling (manual strangulation). Fingernails leave small crescent-shaped (semilunar) abrasions when pressed in, or linear scratches when dragged. These are classic on the neck in throttling. A ligature mark on the neck is a crush (pressure) abrasion that reproduces the shape of the ligating material, and it is presumed homicidal until proven otherwise.\n\nBoth throttling and ligature strangulation are, by definition or by default, homicidal. Throttling is always homicidal. Ligature strangulation is homicidal or accidental, never suicidal. Hanging, by contrast, can be suicidal, homicidal or accidental, and the manner is never assumed from the mechanism alone.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__9__vg1yxc",
+            "number": "9",
+            "text": "True about the frothy secretions in drowning:",
+            "options": [
+              "Bloody",
+              "Turbid",
+              "White and Fine",
+              "Coarse",
+              "Offensive"
+            ],
+            "originalOptions": [
+              "Bloody",
+              "Turbid",
+              "White and Fine",
+              "Coarse",
+              "Offensive"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "correctAnswer": "C) White and Fine",
+            "correctAnswerText": "White and Fine",
+            "correctIndex": 2,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "C",
+            "explanation": "Drowning froth is white (may be pink-tinged), fine, lathery, tenacious and persistent. Coarse, offensive froth is putrefactive, not drowning froth.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Froth at the mouth and nostrils is a sure external sign of drowning and an ante-mortem sign. It forms from air, water and mucus whipped together by continued respiratory effort. It will not form if the body was already dead and was dumped in the water afterward.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Drowning froth</th><th>Putrefactive froth</th></tr>\n</thead>\n<tbody>\n<tr><td>Colour</td><td>White (may be pink-tinged)</td><td>Red-brown</td></tr>\n<tr><td>Texture</td><td>Fine, lathery</td><td>Coarse</td></tr>\n<tr><td>Persistence</td><td>Tenacious and persistent, re-forms after wiping</td><td>Not described as persistent</td></tr>\n<tr><td>Smell</td><td>Not described</td><td>Offensive</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__10__khvhp5",
+            "number": "10",
+            "text": "Froth after drowning is:",
+            "options": [
+              "White fine",
+              "Turbid",
+              "Hemorrhagic"
+            ],
+            "originalOptions": [
+              "White fine",
+              "Turbid",
+              "Hemorrhagic"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correctAnswer": "A) White fine",
+            "correctAnswerText": "White fine",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Drowning froth is white (may be pink-tinged), fine and lathery, formed from air, water and mucus. Bloody or coarse froth does not describe it.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The signs of drowning separate into sure and probable ones.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Category</th><th>Sign</th><th>Meaning</th></tr>\n</thead>\n<tbody>\n<tr><td>Sure external</td><td>Froth at the mouth and/or nostrils</td><td>Ante-mortem sign: the victim was alive and breathing when entering the water</td></tr>\n<tr><td>Sure external</td><td>Cadaveric spasm</td><td>Ante-mortem sign: proof of life at entry into water (e.g. clutched weeds)</td></tr>\n<tr><td>Probable</td><td>Cyanosis</td><td>Related to anoxic anoxia</td></tr>\n<tr><td>Probable</td><td>Pale, wet skin; goose skin; washerwoman's skin</td><td>Related to the body being in water</td></tr>\n<tr><td>Probable</td><td>Post-mortem injuries (animal bites, water movement, sand or rocks)</td><td>Occur after death in water</td></tr>\n</tbody>\n</table>\n\nThe key investigative question is whether the person was alive when they went into the water or already dead. Froth and cadaveric spasm answer it.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__11__e1ejc8",
+            "number": "11",
+            "text": "The dead body is lying on autopsy table. There is leathery, fine, tenacious, persistent froth at mouth and nostrils. The death is due to:",
+            "options": [
+              "Barbiturate poisoning",
+              "Drowning",
+              "Opium poisoning",
+              "Throttling",
+              "Traumatic Asphyxia"
+            ],
+            "originalOptions": [
+              "Barbiturate poisoning",
+              "Drowning",
+              "Opium poisoning",
+              "Throttling",
+              "Traumatic Asphyxia"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "correctAnswer": "B) Drowning",
+            "correctAnswerText": "Drowning",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Fine, tenacious, persistent froth at the mouth and nostrils is the sure external sign of drowning. It is formed by respiratory effort during submersion.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Drowning is mechanical anoxic death due to submersion of the respiratory openings under water.\n\nCauses of death:\n- direct cause: mechanical anoxia\n- indirect causes: reflex cardiac inhibition from vagal stimulation, and head injury or other fatal injuries sustained before or during submersion\n\nThe manner may be homicidal, suicidal or accidental. Water immersion alters the usual timeline of post-mortem changes, so cooling, hypostasis, adipocere and putrefaction are all affected. This matters when estimating time of death.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__12__vi3ce4",
+            "number": "12",
+            "text": "In drowning, the finding most indicative of TIME PASSED since death:",
+            "options": [
+              "Washerwoman skin (skin maceration)",
+              "Froth at mouth/nostrils",
+              "Goose skin appearance",
+              "Coldness of the body"
+            ],
+            "originalOptions": [
+              "Washerwoman skin (skin maceration)",
+              "Froth at mouth/nostrils",
+              "Goose skin appearance",
+              "Coldness of the body"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Washerwoman skin (skin maceration)",
+            "correctAnswerText": "Washerwoman skin (skin maceration)",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Washerwoman's skin shows how long the body has been in water (time since immersion), not the cause of death. Froth indicates life at entry into the water.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Maceration of the hands and feet begins within hours and progresses to peeling (\"glove and stocking\" skin) over days to weeks, faster in warm water. A body dumped after death macerates too, so it cannot show that the person drowned.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Sign</th><th>What it tells you</th></tr>\n</thead>\n<tbody>\n<tr><td>Froth at mouth/nostrils</td><td>Alive and breathing at submersion (ante-mortem)</td></tr>\n<tr><td>Cadaveric spasm</td><td>Alive at entry into the water (ante-mortem)</td></tr>\n<tr><td>Washerwoman's skin</td><td>Duration of immersion</td></tr>\n<tr><td>Goose skin (cutis anserina)</td><td>Probable sign related to the body being in water</td></tr>\n</tbody>\n</table>\n\nNote that the guide words this sign as time since immersion.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__13__lbj713",
+            "number": "13",
+            "text": "In drowning – one is indicated for time passed since death:",
+            "options": [
+              "Washerwoman skin (maceration)",
+              "Froth at mouth/nostrils",
+              "Goose skin appearance",
+              "Coldness of the body"
+            ],
+            "originalOptions": [
+              "Washerwoman skin (maceration)",
+              "Froth at mouth/nostrils",
+              "Goose skin appearance",
+              "Coldness of the body"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Washerwoman skin (maceration)",
+            "correctAnswerText": "Washerwoman skin (maceration)",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Maceration progresses with time in water, so it indicates how long the body has been immersed. Froth is an ante-mortem sign of drowning, not a measure of time.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Being in water changes the normal timeline of post-mortem changes. Cooling, hypostasis, adipocere and putrefaction are all altered by immersion.\n\n- Decomposition in water is slow, because of exclusion of air, protection by clothes and early cooling.\n- Hypostasis in drowning is often faint, because moving water keeps turning the body. A floating body usually lies face-down with the head dependent, so lividity appears in the face, upper chest and upper limbs.\n- Washerwoman's skin is a time-in-water marker. Goose skin is a probable sign related to the body being in water.\n\nFor these reasons, time-of-death estimates in drowning cases have to be made cautiously.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__14__1y2os5",
+            "number": "14",
+            "text": "Traumatic asphyxia shows:",
+            "options": [
+              "Pale skin below neck",
+              "Line of demarcation",
+              "Cherry red color",
+              "Adipocere formation"
+            ],
+            "originalOptions": [
+              "Pale skin below neck",
+              "Line of demarcation",
+              "Cherry red color",
+              "Adipocere formation"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Line of demarcation",
+            "correctAnswerText": "Line of demarcation",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Chest compression blocks venous return from the head. This causes intense congestion and petechiae above the level of compression, ending at a sharp line of demarcation.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Traumatic asphyxia occurs when a heavy weight presses on the chest or upper abdomen and makes respiration impossible. It is typically seen in \"riot-crush\", when a crowd compresses the chest.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Aspect</th><th>Details</th></tr>\n</thead>\n<tbody>\n<tr><td>Causes of death</td><td>Mechanical anoxia, injury to vital organs, positional asphyxia where mechanisms overlap</td></tr>\n<tr><td>Findings</td><td>Contusions and abrasions of the chest and abdomen, fractured ribs, rupture of internal organs</td></tr>\n<tr><td>Skin picture</td><td>Intense congestion, cyanosis and huge numbers of petechiae over face, neck and upper chest; line of demarcation between the discoloured upper body and the normal lower part</td></tr>\n<tr><td>Manner</td><td>Mostly accidental, may be homicidal</td></tr>\n</tbody>\n</table>\n\nCherry-red colour belongs to carbon monoxide poisoning, and adipocere is a late post-mortem change.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__15__cer1cz",
+            "number": "15",
+            "text": "Clear line of demarcation on the neck is always seen in:",
+            "options": [
+              "Hanged body",
+              "Traumatic asphyxia",
+              "Gagging",
+              "Drowning"
+            ],
+            "originalOptions": [
+              "Hanged body",
+              "Traumatic asphyxia",
+              "Gagging",
+              "Drowning"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Traumatic asphyxia",
+            "correctAnswerText": "Traumatic asphyxia",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Traumatic asphyxia produces a sharp line of demarcation at the level of chest compression, between the discoloured upper body and the normal lower part.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The line of demarcation is the signature of traumatic asphyxia. It marks the level of compression. Above it the face, neck and upper chest show intense congestion, cyanosis and numerous petechiae (an \"ecchymotic mask\"). Below it the body looks normal.\n\nThe cause is blocked venous return from the head. Hanging, gagging and drowning do not produce this pattern. Gagging means a cloth is pushed into or across the mouth, with progressive asphyxia as the nares close from mucus and oedema.\n\nIn the guide the line is at the level of compression, which is usually the chest or upper abdomen, rather than literally on the neck.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__16__xx8dfe",
+            "number": "16",
+            "text": "Petechial hemorrhages are typically seen in which condition?",
+            "options": [
+              "Road traffic accidents",
+              "Riot crush asphyxia",
+              "Cardiac tamponade",
+              "Heat stroke"
+            ],
+            "originalOptions": [
+              "Road traffic accidents",
+              "Riot crush asphyxia",
+              "Cardiac tamponade",
+              "Heat stroke"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Riot crush asphyxia",
+            "correctAnswerText": "Riot crush asphyxia",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Massive petechiae over the face, neck and upper chest point to traumatic (crush or riot) asphyxia.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Petechiae are pinpoint haemorrhages from rupture of small vessels, predominantly small venules. The rupture appears to be mechanical, caused by sudden over-distension after an abrupt rise in intravascular pressure. They are found above the level of the obstruction. The most common sites are the visceral pleura and the epicardium. They also appear in the conjunctivae and sclerae, where venules are unsupported by surrounding tissue.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Classical sign</th><th>What it is</th></tr>\n</thead>\n<tbody>\n<tr><td>Congestion</td><td>Red face and head from venous filling when venous return is obstructed</td></tr>\n<tr><td>Oedema</td><td>Transudation of fluid from veins under raised venous pressure</td></tr>\n<tr><td>Cyanosis</td><td>Increase in reduced haemoglobin, observable from about 5 g/100 mL</td></tr>\n<tr><td>Petechiae</td><td>Ruptured venules in skin, eyes, pleura and epicardium</td></tr>\n</tbody>\n</table>\n\nPetechiae are non-specific. They also occur in MI, asthma and whooping cough, so alone they do not prove asphyxia.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__17__57hgpp",
+            "number": "17",
+            "text": "Cause of death in mechanical asphyxia includes all of the following EXCEPT:",
+            "options": [
+              "Anoxia",
+              "Pulmonary edema",
+              "Vagal inhibition (reflex cardiac arrest)",
+              "Sepsis"
+            ],
+            "originalOptions": [
+              "Anoxia",
+              "Pulmonary edema",
+              "Vagal inhibition (reflex cardiac arrest)",
+              "Sepsis"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "D) Sepsis",
+            "correctAnswerText": "Sepsis",
+            "correctIndex": 3,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "D",
+            "explanation": "Mechanical asphyxia kills by anoxia, pulmonary oedema, reflex vagal cardiac inhibition and cerebral ischaemia. Sepsis is not one of these mechanisms.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The underlying mechanism of death in mechanical (violent) asphyxia is usually a combination of neck compression, airway blockage, compression of the chest or face, and chemical asphyxia or lack of oxygen. Delayed glottic oedema can also kill after the ligature is removed.\n\nReflex cardiac arrest works through a defined pathway. Pressure on the carotid sinus sends afferent impulses along the glossopharyngeal nerve (CN IX), and the efferent limb is the vagus (CN X).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Causes of death</th></tr>\n</thead>\n<tbody>\n<tr><td>Hanging</td><td>Cerebral ischaemia (commonest), vagal cardiac inhibition, mechanical anoxia; cord transection in judicial hanging</td></tr>\n<tr><td>Ligature strangulation</td><td>Mechanical anoxia, reflex cardiac inhibition, delayed glottic oedema</td></tr>\n<tr><td>Throttling</td><td>Mechanical anoxia, reflex cardiac inhibition, cerebral anoxia, delayed glottic oedema</td></tr>\n<tr><td>Choking</td><td>Reflex cardiac inhibition, mechanical anoxia</td></tr>\n<tr><td>Drowning</td><td>Mechanical anoxia; indirect: vagal cardiac inhibition, associated head injury</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__18__dkz5ff",
+            "number": "18",
+            "text": "Mechanical asphyxia is type of:",
+            "options": [
+              "Anoxic anoxia",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "originalOptions": [
+              "Anoxic anoxia",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Anoxic anoxia",
+            "correctAnswerText": "Anoxic anoxia",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "In mechanical (violent) asphyxia, an external force obstructing the airway prevents enough oxygen reaching the blood. This is anoxic anoxia.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Hypoxia means low oxygen and anoxia means without oxygen. Each type of anoxia corresponds to a failure at a different point in the oxygen chain.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Problem</th><th>Examples</th></tr>\n</thead>\n<tbody>\n<tr><td>Anoxic</td><td>Not enough oxygen reaches the blood</td><td>High altitude, respiratory centre depression (morphine), paralysis (anaesthetics, Guillain–Barré), mechanical asphyxia, pulmonary embolism</td></tr>\n<tr><td>Anaemic</td><td>Blood cannot carry oxygen properly</td><td>Severe anaemia, CO (carboxyhaemoglobin), haemolysis, haemorrhage</td></tr>\n<tr><td>Stagnant</td><td>Circulation or delivery to tissue fails</td><td>Shock, heart failure, local vascular obstruction</td></tr>\n<tr><td>Histotoxic</td><td>Tissues cannot use delivered oxygen</td><td>Cyanide (cytochrome oxidase inhibition)</td></tr>\n</tbody>\n</table>\n\nOnce the airway is obstructed, three stages follow: forced respiration, convulsions, and paralysis. Death occurs in about 5 minutes overall.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__19__s1lp6r",
+            "number": "19",
+            "text": "The cause of death in an environment with DECREASED O2 levels will be:",
+            "options": [
+              "Anoxic Anoxia",
+              "Anemic Anoxia",
+              "Mechanical Anoxia",
+              "Histotoxic Anoxia"
+            ],
+            "originalOptions": [
+              "Anoxic Anoxia",
+              "Anemic Anoxia",
+              "Mechanical Anoxia",
+              "Histotoxic Anoxia"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Anoxic Anoxia",
+            "correctAnswerText": "Anoxic Anoxia",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Low ambient oxygen (e.g. high altitude) means too little oxygen enters the blood, which is anoxic anoxia. This is the ambient subtype.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Anoxic anoxia has several subtypes. Mechanical is only one of them, so the option \"mechanical anoxia\" does not describe a low-oxygen atmosphere.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Subtype of anoxic anoxia</th><th>Mechanism</th><th>Example</th></tr>\n</thead>\n<tbody>\n<tr><td>Ambient</td><td>Low ambient oxygen</td><td>High altitude</td></tr>\n<tr><td>Central</td><td>Depression of the respiratory centre</td><td>Morphine overdose, medullary herniation</td></tr>\n<tr><td>Paralytic</td><td>Peripheral nerve injury or drug paralysis</td><td>Anaesthetic drugs, Guillain–Barré</td></tr>\n<tr><td>Mechanical (violent asphyxia)</td><td>External force obstructing the airway</td><td>Smothering, gagging, choking, strangulation</td></tr>\n<tr><td>Pulmonary blood flow obstruction</td><td>No perfusion of the lung</td><td>Pulmonary embolism</td></tr>\n</tbody>\n</table>\n\nNormal oxygenation requires an oxygen-containing environment, a patent airway, normal lungs, blood supply to the lungs, a working respiratory centre, a normal chest wall, a functioning heart and blood able to carry oxygen.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__20__yqqtna",
+            "number": "20",
+            "text": "NOT of the TRIAD features of asphyxia:",
+            "options": [
+              "Congestion",
+              "Fluid in the left side of the heart",
+              "Cyanosis of face and chest",
+              "Petechial hemorrhages in skin of face and eyes"
+            ],
+            "originalOptions": [
+              "Congestion",
+              "Fluid in the left side of the heart",
+              "Cyanosis of face and chest",
+              "Petechial hemorrhages in skin of face and eyes"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) Fluid in the left side of the heart",
+            "correctAnswerText": "Fluid in the left side of the heart",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "The exam triad is congestion, cyanosis and petechial haemorrhages. Fluid in the left side of the heart is not a feature of asphyxia.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The classical features of asphyxia are found where air passages are obstructed by pressure on the neck or chest: congestion, oedema, cyanosis and petechial haemorrhages. Exam questions often use the triad of congestion, cyanosis and petechiae. Older texts describe a distended right heart and engorged great veins, not fluid in the left heart.\n\nPoints to remember:\n- Increased fluidity of the blood was taught as a fifth classical feature but is now rejected, a classic exam trap.\n- The signs are very non-specific and unreliable. Even several together do not prove mechanical asphyxia.\n- If death occurs very rapidly, the signs may not have time to develop.\n- The slower the death, the more prominent the signs.\n- The correct approach combines history and circumstances, exclusion of other causes and cautious evaluation of the signs.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__21__uv7usc",
+            "number": "21",
+            "text": "How are antemortem hangings diagnosed?",
+            "options": [
+              "By the presence of cadaveric spasm",
+              "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+              "By livor mortis pattern",
+              "By scene markers only"
+            ],
+            "originalOptions": [
+              "By the presence of cadaveric spasm",
+              "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+              "By livor mortis pattern",
+              "By scene markers only"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "B) By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+            "correctAnswerText": "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Ante-mortem hanging is proved by vital reaction in the ligature mark: bruising or haemorrhage in the base and margins of the groove, reddened edges, and inflammatory cells on histology.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "A body hanged after death shows a pale, parchment-like groove with no vital reaction. In ante-mortem hanging the ligature mark shows bruising and haemorrhage in the base and margins, with reddened edges and inflammatory cells on histology. Supporting findings are dribbling of saliva, congestion and petechiae above the mark, and carotid intimal tears.\n\nCaution on timing: white blood cells remain capable of movement for up to 12 hours after cardiac arrest. This makes microscopic identification of a vital reaction of doubtful reliability when judging ante- versus post-mortem timing.\n\nCadaveric spasm and livor patterns are not the diagnostic test for ante-mortem hanging.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__22__z4g4h2",
+            "number": "22",
+            "text": "Sign of antemortem hanging:",
+            "options": [
+              "Salivation / dripping of saliva",
+              "Tardieu spots only",
+              "No findings",
+              "Congestion alone"
+            ],
+            "originalOptions": [
+              "Salivation / dripping of saliva",
+              "Tardieu spots only",
+              "No findings",
+              "Congestion alone"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Salivation / dripping of saliva",
+            "correctAnswerText": "Salivation / dripping of saliva",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Dribbling of saliva is the most important sign for hanging and is an ante-mortem sign.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "The post-mortem picture of hanging has general and special features.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Finding in hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Tongue</td><td>Protrusion</td></tr>\n<tr><td>Saliva</td><td>Dribbling: the most important sign, ante-mortem</td></tr>\n<tr><td>Hypostasis</td><td>Lower half of the body</td></tr>\n<tr><td>Neck</td><td>Elongated, with the head tilted to the opposite side from the suspension point</td></tr>\n<tr><td>Ligature mark</td><td>High, oblique and incomplete, with an imprint of the ligature material</td></tr>\n</tbody>\n</table>\n\nAsphyxial signs are non-specific: congestion alone or petechiae alone do not prove hanging.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__23__q1p56e",
+            "number": "23",
+            "text": "Dripping of saliva occurs in:",
+            "options": [
+              "Antemortem hanging",
+              "Postmortem hanging",
+              "Drowning",
+              "Strangulation"
+            ],
+            "originalOptions": [
+              "Antemortem hanging",
+              "Postmortem hanging",
+              "Drowning",
+              "Strangulation"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Antemortem hanging",
+            "correctAnswerText": "Antemortem hanging",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Dribbling of saliva is an ante-mortem sign of hanging, so it is not seen in a body hanged after death.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Saliva dribbling is the most important sign for hanging. It is an ante-mortem finding, which makes it useful in separating a true hanging from a body strung up after death. It differs between the two forms of hanging.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Dribbling of saliva</td><td>Positive</td><td>Negative</td></tr>\n<tr><td>Tear in carotid intima</td><td>Positive</td><td>Negative</td></tr>\n<tr><td>Face</td><td>Less congested, sometimes pale</td><td>Markedly congested</td></tr>\n</tbody>\n</table>\n\nManner may be suicidal, homicidal or accidental.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__24__8r34up",
+            "number": "24",
+            "text": "Hypostasis in lower limbs is a sign of:",
+            "options": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Strangulation"
+            ],
+            "originalOptions": [
+              "Complete hanging",
+              "Incomplete hanging",
+              "Strangulation"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correctAnswer": "A) Complete hanging",
+            "correctAnswerText": "Complete hanging",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "In complete hanging the body is fully suspended, so blood pools in the dependent lower half. In incomplete hanging the hypostasis follows whichever part touches the ground.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "After death, blood moves only under gravity, so lividity shows the posture of the body. Lividity starts immediately, is apparent after about 2 hours, and begins to fix around 6–8 hours. Before fixation it can shift if the body is moved. A body moved after death may show two overlapping patterns (dual lividity).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Body position</th><th>Distribution of lividity</th></tr>\n</thead>\n<tbody>\n<tr><td>Vertical (hanging)</td><td>Distal: legs, feet, hands</td></tr>\n<tr><td>Incomplete hanging</td><td>According to the part touching the ground</td></tr>\n<tr><td>Drowning (floating face-down)</td><td>Chest, upper chest, upper limbs</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__25__2f5k94",
+            "number": "25",
+            "text": "Abrasions around the mouth indicate:",
+            "options": [
+              "Smothering",
+              "Throttling",
+              "Hanging",
+              "Drowning"
+            ],
+            "originalOptions": [
+              "Smothering",
+              "Throttling",
+              "Hanging",
+              "Drowning"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Smothering",
+            "correctAnswerText": "Smothering",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Smothering involves a hand or soft object over the nose and mouth. Fingernail abrasions around the nose and mouth are classic.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Smothering is mechanical anoxic death caused by occlusion of the external respiratory openings by the hand or soft objects. Findings are multiple contusions and fingernail abrasions, contusions in the buccal mucosa, and ventral hypostasis in cot death. If the victim struggles, there may be bruises and abrasions on the face and lips and inside the mouth, where the lips are pressed against the teeth.\n\nSmothering may leave almost no signs.\n- Pressure over the nose and mouth only very rarely causes petechiae, significant cyanosis or congestion unless the victim struggles.\n- It may be virtually impossible to diagnose in the old, the infirm or the very young. This matters for elder abuse and infant deaths that may be mistaken for natural or SIDS deaths.\n- Plastic bag suffocation typically shows no classic asphyxial signs, and the face is usually pale. The \"Exit\" method is an example.\n\nManner is homicidal or accidental.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__26__xrf9ge",
+            "number": "26",
+            "text": "Manner of death in choking:",
+            "options": [
+              "Accidental",
+              "Homicidal",
+              "Suicidal",
+              "Undetermined"
+            ],
+            "originalOptions": [
+              "Accidental",
+              "Homicidal",
+              "Suicidal",
+              "Undetermined"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Accidental",
+            "correctAnswerText": "Accidental",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Choking is mainly accidental, classically a small child choking on a button or small object. Homicidal choking is possible in principle but rare.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Choking is mechanical anoxic death from occlusion of the respiratory passages from inside, at the larynx, classically by a foreign body. It can cause sudden cardiac death through vagal reflex pathways, not only by blocking airflow. Causes of death are reflex cardiac inhibition and mechanical anoxia.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Site/mechanism of obstruction</th><th>Manner</th></tr>\n</thead>\n<tbody>\n<tr><td>Smothering</td><td>External openings (nose, mouth) occluded by hand or soft object</td><td>Homicidal or accidental</td></tr>\n<tr><td>Gagging</td><td>Cloth pushed into or across the mouth; breathing continues via the nose at first</td><td>Often seen in robbery</td></tr>\n<tr><td>Choking</td><td>Respiratory passages occluded from inside, at the larynx</td><td>Mainly accidental</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__27__wikim0",
+            "number": "27",
+            "text": "Histotoxic anoxia is caused by:",
+            "options": [
+              "CO",
+              "Morphine",
+              "HCN (hydrogen cyanide)",
+              "Barbiturates"
+            ],
+            "originalOptions": [
+              "CO",
+              "Morphine",
+              "HCN (hydrogen cyanide)",
+              "Barbiturates"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "C) HCN (hydrogen cyanide)",
+            "correctAnswerText": "HCN (hydrogen cyanide)",
+            "correctIndex": 2,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "C",
+            "explanation": "Cyanide inhibits cytochrome oxidase, so tissues cannot use oxygen even though delivery is normal. This is histotoxic anoxia.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "In histotoxic anoxia, oxygen is delivered normally but the cells cannot use it. The classic cause is cyanide, which inhibits cytochrome oxidase. The same mitochondrial enzyme is affected by carbon monoxide, discussed in the toxicology section.\n\nHow the other options relate:\n- CO is classed as anaemic anoxia in the guide: it forms carboxyhaemoglobin, which reduces the blood's ability to carry oxygen.\n- Morphine causes anoxic anoxia of the central type, by depressing the respiratory centre.\n\nLividity colour is cherry pink in CO poisoning, in cold, and in cyanide poisoning.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__28__e0f4gb",
+            "number": "28",
+            "text": "Complete hanging is related to:",
+            "options": [
+              "Height",
+              "Weight",
+              "Gender",
+              "Degree of suspension"
+            ],
+            "originalOptions": [
+              "Height",
+              "Weight",
+              "Gender",
+              "Degree of suspension"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "D) Degree of suspension",
+            "correctAnswerText": "Degree of suspension",
+            "correctIndex": 3,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "D",
+            "explanation": "Complete hanging means the full body weight is suspended with the feet off the ground. Incomplete hanging is partial suspension.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "A common misconception is that hanging requires the full body weight to be suspended in the air. Incomplete hanging, with feet or knees still touching the ground, can still be fatal. A hanging survivor should be kept under observation even if apparently well, because laryngeal oedema from neck compression may compromise the airway later.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Other name</td><td>High point hanging</td><td>Low point hanging</td></tr>\n<tr><td>Touching the ground</td><td>Negative</td><td>Positive</td></tr>\n<tr><td>Main cause of death</td><td>Cerebral ischaemia</td><td>Asphyxia</td></tr>\n<tr><td>Hypostasis</td><td>Lower half of the body</td><td>According to the part touching the ground</td></tr>\n<tr><td>Knot</td><td>Fixed knot or running noose</td><td>Always a running noose</td></tr>\n<tr><td>Ligature mark</td><td>Incomplete, above the thyroid cartilage, oblique, deep, fading toward the suspension point</td><td>Complete, below the thyroid cartilage, transverse, deep all through</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__29__r78o44",
+            "number": "29",
+            "text": "Death of 65-year-old person dropped in sea water. Skin showing goose skin appearance, hair easily removed. Right hand grasping forcefully grass weeds. This is consistent with:",
+            "options": [
+              "Mummification",
+              "Cadaveric spasm",
+              "Adipocere changes",
+              "Anoxemia",
+              "Usual postmortem stiffening"
+            ],
+            "originalOptions": [
+              "Mummification",
+              "Cadaveric spasm",
+              "Adipocere changes",
+              "Anoxemia",
+              "Usual postmortem stiffening"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "correctAnswer": "B) Cadaveric spasm",
+            "correctAnswerText": "Cadaveric spasm",
+            "correctIndex": 1,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "B",
+            "explanation": "Forceful grasping of weeds or grass in a drowning victim is cadaveric spasm. It proves the person was alive at the time of entry into the water.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Cadaveric spasm (instantaneous rigor) occurs at the moment of death and may persist into the period of rigor mortis. Its cause is unknown, but it is usually associated with violent deaths with intense emotion. It affects only selected muscles that were contracted at death, and it often demonstrates the last activity before death, for example gripping a knife.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Rigor mortis</th><th>Cadaveric spasm</th></tr>\n</thead>\n<tbody>\n<tr><td>Onset</td><td>Delayed, 2–3 hours</td><td>Instantaneous</td></tr>\n<tr><td>Duration</td><td>Up to 36 hours</td><td>A few hours, until replaced by rigor</td></tr>\n<tr><td>Intensity</td><td>Comparatively moderate</td><td>Comparatively very strong</td></tr>\n<tr><td>Mechanism</td><td>ATP falls below a critical level</td><td>Unknown</td></tr>\n<tr><td>Muscles</td><td>All muscles, gradually</td><td>Only muscles contracted at death</td></tr>\n</tbody>\n</table>\n\nGoose skin is a probable drowning sign. Cadaveric spasm is one of the sure ante-mortem drowning signs.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__30__c6s3a3",
+            "number": "30",
+            "text": "Guillain-Barré syndrome (GBS) causes what type of anoxia:",
+            "options": [
+              "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "originalOptions": [
+              "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+            "correctAnswerText": "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "Guillain–Barré causes paralytic anoxic anoxia. Peripheral nerve injury stops respiration, so not enough oxygen reaches the blood.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Anoxic anoxia means oxygen does not reach the blood in adequate amounts. The paralytic subtype covers anaesthetic drugs and Guillain–Barré syndrome with peripheral nerve injury. It should be distinguished from the central subtype (respiratory centre depression, e.g. morphine overdose or medullary herniation).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Site of failure</th><th>Example</th></tr>\n</thead>\n<tbody>\n<tr><td>Respiratory centre</td><td>Morphine overdose, medullary herniation</td></tr>\n<tr><td>Peripheral nerves / muscles</td><td>Guillain–Barré, anaesthetic drugs</td></tr>\n<tr><td>Airway</td><td>Mechanical asphyxia</td></tr>\n<tr><td>Pulmonary blood flow</td><td>Pulmonary embolism</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__31__hce3nw",
+            "number": "31",
+            "text": "What type of asphyxia is caused by cyanide (HCN)?",
+            "options": [
+              "Anoxic anoxia",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "originalOptions": [
+              "Anoxic anoxia",
+              "Anemic anoxia",
+              "Stagnant anoxia",
+              "Histotoxic anoxia"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "D) Histotoxic anoxia",
+            "correctAnswerText": "Histotoxic anoxia",
+            "correctIndex": 3,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "D",
+            "explanation": "Cyanide inhibits cytochrome oxidase. Oxygen is delivered normally, but the tissues cannot retrieve it.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "Histotoxic anoxia is a failure at the cellular level. Oxygen is in the environment, the airway is patent, the lungs and blood are normal and delivery is intact, but the cells cannot use the oxygen.\n\nContrasts with the other types:\n- Anoxic: not enough oxygen reaches the blood.\n- Anaemic: the blood cannot carry oxygen, as in CO poisoning.\n- Stagnant: delivery fails, as in shock or heart failure.\n\nOther points the guide gives about cyanide:\n- It is listed among chemical asphyxiants, alongside carbon monoxide and hydrogen sulfide, where inhalation prevents utilisation of oxygen at the cellular level.\n- Lividity is cherry pink.\n- Rigor mortis develops early.\n- It is not a cause of apparent death, because it causes rapid true death.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          },
+          {
+            "id": "forensic__lecture__asphyxia__32__n0emrz",
+            "number": "32",
+            "text": "Vagus nerve shares the same root with:",
+            "options": [
+              "Glossopharyngeal (CN IX)",
+              "Trochlear nerve",
+              "Facial nerve",
+              "Temporal nerve"
+            ],
+            "originalOptions": [
+              "Glossopharyngeal (CN IX)",
+              "Trochlear nerve",
+              "Facial nerve",
+              "Temporal nerve"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "correctAnswer": "A) Glossopharyngeal (CN IX)",
+            "correctAnswerText": "Glossopharyngeal (CN IX)",
+            "correctIndex": 0,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "A",
+            "explanation": "CN IX and CN X arise together from the medulla and leave the skull through the jugular foramen.",
+            "batchName": "",
+            "batchNames": [],
+            "note": "",
+            "eshrahly": "This anatomy underlies reflex cardiac arrest in neck compression. Pressure on the carotid sinus sends afferent impulses along the glossopharyngeal nerve (CN IX). The efferent limb is the vagus (CN X), which inhibits the heart. Vagal cardiac inhibition can therefore cause death without prolonged anoxia.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Condition</th><th>Reflex/vagal contribution to death</th></tr>\n</thead>\n<tbody>\n<tr><td>Hanging</td><td>Vagal cardiac inhibition</td></tr>\n<tr><td>Ligature strangulation</td><td>Reflex cardiac inhibition</td></tr>\n<tr><td>Throttling</td><td>Reflex cardiac inhibition</td></tr>\n<tr><td>Choking</td><td>Reflex cardiac inhibition (a foreign body in the larynx can trigger vagal bronchospasm and stop the heart)</td></tr>\n<tr><td>Drowning</td><td>Indirect cause: reflex cardiac inhibition from vagal stimulation</td></tr>\n</tbody>\n</table>",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "lecture"
+          }
+        ]
+      }
+    ],
+    "ai": [],
+    "years": [],
+    "allQuestions": [
+      {
+        "id": "forensic__lecture__asphyxia__1__4zwz16",
+        "number": "1",
+        "text": "Burking is:",
+        "options": [
+          "Throttling only",
+          "Traumatic asphyxia + smothering",
+          "Hanging + drowning",
+          "Gagging only"
+        ],
+        "originalOptions": [
+          "Throttling only",
+          "Traumatic asphyxia + smothering",
+          "Hanging + drowning",
+          "Gagging only"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Traumatic asphyxia + smothering",
+        "correctAnswerText": "Traumatic asphyxia + smothering",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Burking combines compression of the chest (traumatic asphyxia) with closure of the nose and mouth (smothering). This is the Burke and Hare method.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Burking is a homicidal method that joins two mechanisms. The killer kneels or sits on the victim's chest while closing the nose and mouth with a hand (Burke and Hare, Edinburgh 1828). It may leave few external signs. Smothering by itself rarely produces petechiae, significant cyanosis or congestion unless the victim struggles. Traumatic asphyxia, in contrast, produces dramatic congestion and petechiae.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Mechanism</th><th>What happens</th><th>Typical manner</th></tr>\n</thead>\n<tbody>\n<tr><td>Traumatic asphyxia</td><td>A heavy weight presses on the chest or upper abdomen and makes respiration impossible. Findings: congestion, cyanosis, petechiae, a line of demarcation.</td><td>Mostly accidental, may be homicidal</td></tr>\n<tr><td>Smothering</td><td>The external respiratory openings are occluded by a hand or soft objects.</td><td>Homicidal or accidental</td></tr>\n<tr><td>Burking</td><td>Traumatic asphyxia and smothering together.</td><td>Homicidal</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__2__ko26jz",
+        "number": "2",
+        "text": "The most common cause of inward (central) hyoid bone fracture is:",
+        "options": [
+          "Hanging",
+          "Throttling",
+          "Strangulation by ligature",
+          "Burking"
+        ],
+        "originalOptions": [
+          "Hanging",
+          "Throttling",
+          "Strangulation by ligature",
+          "Burking"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Throttling",
+        "correctAnswerText": "Throttling",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Throttling (manual strangulation) is the most common cause of hyoid bone fracture, and the fracture is inward.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Throttling is constriction of the neck by the hand. The direct, forceful and repeated finger pressure damages the deep neck structures. Its findings are multiple contusions and fingernail abrasions on the neck, inward fracture of the hyoid and of the thyroid cartilage, and contusions of the deep tissues of the neck. Throttling is homicidal by definition, because grip relaxes as consciousness is lost.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Form of neck compression</th><th>Internal neck findings</th></tr>\n</thead>\n<tbody>\n<tr><td>Throttling</td><td>Inward hyoid fracture (the most common cause of hyoid fracture), thyroid cartilage fracture, deep muscle bruising</td></tr>\n<tr><td>Ligature strangulation</td><td>Inward hyoid fracture, possible thyroid cartilage fracture, contusions and lacerations of neck muscles</td></tr>\n<tr><td>Ordinary (suicidal) hanging</td><td>Usually little internal damage</td></tr>\n<tr><td>Judicial long-drop hanging</td><td>Extensive neck laceration, torn sternomastoids, fracture-dislocation of C2–C3</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__3__lazqqq",
+        "number": "3",
+        "text": "Which method of asphyxia shows MOST severe internal neck damage:",
+        "options": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Throttling",
+          "Strangulation"
+        ],
+        "originalOptions": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Throttling",
+          "Strangulation"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "C) Throttling",
+        "correctAnswerText": "Throttling",
+        "correctIndex": 2,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "C",
+        "explanation": "Throttling involves direct, forceful, repeated finger pressure, which causes extensive deep-muscle bruising and fractures of the hyoid and thyroid cartilage. Ordinary hanging usually causes little internal damage.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The amount of internal damage follows how the force is applied. In throttling the hand grips the neck directly. This explains the deep contusions and the cartilage and hyoid fractures. In ordinary hanging the body's own weight acts through a ligature, and internal damage is usually minimal. Massive damage in a hanging suggests a judicial long drop. The cause of death also differs between the forms.\n\nThrottling causes death by:\n- mechanical anoxia\n- reflex cardiac inhibition\n- cerebral anoxia\n- delayed glottic oedema and choking\n\nHanging causes death mainly by cerebral ischaemia from carotid compression, with vagal cardiac inhibition and mechanical anoxia also contributing. Severe internal neck injury should therefore point first to throttling, or to a judicial hanging.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__4__2xjbcl",
+        "number": "4",
+        "text": "Which one causes severe damage to internal neck structures:",
+        "options": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Throttling"
+        ],
+        "originalOptions": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Throttling"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctAnswer": "C) Throttling",
+        "correctAnswerText": "Throttling",
+        "correctIndex": 2,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "C",
+        "explanation": "Throttling produces extensive deep-muscle bruising and fractures of the hyoid and thyroid cartilage. Ordinary hanging, complete or incomplete, usually causes little internal damage.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Complete and incomplete hanging are both suspension of the body from the neck by a ligature. They differ in how much of the body weight is carried by the ligature, not in the amount of internal injury.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Body weight</td><td>Fully suspended, feet off the ground</td><td>Partly suspended, feet or knees may touch the ground</td></tr>\n<tr><td>Main cause of death</td><td>Cerebral ischaemia</td><td>Asphyxia</td></tr>\n<tr><td>Face</td><td>Less congested, sometimes pale</td><td>Markedly congested</td></tr>\n<tr><td>Internal neck damage</td><td colspan=\"2\">Usually little in ordinary hanging. Massive damage means judicial long-drop hanging.</td></tr>\n</tbody>\n</table>\n\nThrottling is the form in which deep neck tissues and cartilages are directly crushed by fingers.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__5__ccfwfk",
+        "number": "5",
+        "text": "The findings on the neck: extensive laceration, tears in sternomastoid and fracture-dislocation of C2-C3 vertebrae. These findings are present in:",
+        "options": [
+          "Suicidal hanging",
+          "Accidental hanging",
+          "Incomplete hanging",
+          "Judicial hanging",
+          "Autoerotic hanging"
+        ],
+        "originalOptions": [
+          "Suicidal hanging",
+          "Accidental hanging",
+          "Incomplete hanging",
+          "Judicial hanging",
+          "Autoerotic hanging"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctAnswer": "D) Judicial hanging",
+        "correctAnswerText": "Judicial hanging",
+        "correctIndex": 3,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "D",
+        "explanation": "Extensive neck lacerations, torn sternomastoids and C2–C3 fracture-dislocation (hangman's fracture) with cord transection are the picture of judicial (long-drop) hanging. Ordinary hanging usually causes little internal damage.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Judicial (long-drop) hanging is the form in which the cause of death is transection of the spinal cord, and death is instant. The characteristic findings are extensive neck lacerations, torn sternomastoid muscles, and fracture-dislocation of C2–C3, the \"hangman's fracture\" of C2 (a bilateral pars-articularis fracture). This differs from the other forms of hanging. In suicidal, accidental, incomplete and autoerotic hanging, the neck usually shows only a ligature mark, and death is mainly from cerebral ischaemia, vagal inhibition or mechanical anoxia.\n\nAutoerotic (sexual) asphyxia is usually by hanging, with anoxia induced deliberately to heighten arousal. It can resemble a suicidal hanging, but it does not produce this destructive neck injury.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__6__5mke3s",
+        "number": "6",
+        "text": "Ligature mark of strangulation characteristics:",
+        "options": [
+          "Horizontal, low, complete",
+          "Horizontal, low, incomplete",
+          "Oblique, high, complete",
+          "Oblique, high, incomplete"
+        ],
+        "originalOptions": [
+          "Horizontal, low, complete",
+          "Horizontal, low, incomplete",
+          "Oblique, high, complete",
+          "Oblique, high, incomplete"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Horizontal, low, complete",
+        "correctAnswerText": "Horizontal, low, complete",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "A ligature strangulation mark is transverse (horizontal), low (below the thyroid cartilage) and complete (encircles the whole neck). Hanging is the opposite: oblique, high and incomplete.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "In strangulation, the constricting force comes from the ligature itself, and it is applied evenly around the neck. In hanging, the body weight pulls the ligature upward toward the suspension point.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature of the ligature mark</th><th>Hanging (incomplete)</th><th>Ligature strangulation</th></tr>\n</thead>\n<tbody>\n<tr><td>Level</td><td>High, above the thyroid cartilage</td><td>Low, below the thyroid cartilage</td></tr>\n<tr><td>Direction</td><td>Oblique</td><td>Transverse</td></tr>\n<tr><td>Continuity</td><td>Incomplete (does not encircle the neck)</td><td>Complete (encircles the neck)</td></tr>\n<tr><td>Depth</td><td>Deep, fading gradually toward the suspension point</td><td>Deep all through</td></tr>\n</tbody>\n</table>\n\nThe mark may show the shape of the ligating material, as a crush abrasion with a parchment-like quality. It is less visible with thick hair, a high collar, or a broad, soft ligature. It is more visible with a thin, rough, wire or metal ligature and with a longer duration of constriction.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__7__3fnetc",
+        "number": "7",
+        "text": "Strangulation with ligature:",
+        "options": [
+          "Transverse, complete rope marks",
+          "Associated with multiple lines on the neck",
+          "Marks are high in the neck",
+          "Same as hanging"
+        ],
+        "originalOptions": [
+          "Transverse, complete rope marks",
+          "Associated with multiple lines on the neck",
+          "Marks are high in the neck",
+          "Same as hanging"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Transverse, complete rope marks",
+        "correctAnswerText": "Transverse, complete rope marks",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Ligature strangulation produces transverse, complete marks low in the neck. This is the reverse of hanging, whose marks are high, oblique and incomplete.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Ligature strangulation is mechanical anoxic death caused by constriction of the neck by a ligature that occludes the air passages from outside. The constricting force is not the body's own suspended weight, which is the difference from hanging.\n\nCauses of death:\n- mechanical anoxia\n- reflex cardiac inhibition\n- delayed oedema of the glottis and choking, which can kill even some time after the ligature has been removed\n\nOther findings:\n- abrasions and contusions taking the shape of the ligating material\n- inward fracture of the hyoid, possibly of the thyroid cartilage\n- contusions and lacerations of neck muscles\n\nThe manner is homicidal or accidental, but not suicidal. A person cannot maintain ligature pressure on their own neck after losing consciousness. Any ligature mark on the neck is presumed to be homicide (strangulation) until proven otherwise.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__8__dur955",
+        "number": "8",
+        "text": "Abrasions found on the neck are always considered what until proved otherwise?",
+        "options": [
+          "Hanging",
+          "Strangulation",
+          "Asphyxia",
+          "Drowning"
+        ],
+        "originalOptions": [
+          "Hanging",
+          "Strangulation",
+          "Asphyxia",
+          "Drowning"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Strangulation",
+        "correctAnswerText": "Strangulation",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Neck marks are presumed to be strangulation (homicide) until proven otherwise. This is the reverse default of hanging, which is more often self-inflicted.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Location matters in interpreting abrasions. An abrasion pattern on the neck raises suspicion for throttling (manual strangulation). Fingernails leave small crescent-shaped (semilunar) abrasions when pressed in, or linear scratches when dragged. These are classic on the neck in throttling. A ligature mark on the neck is a crush (pressure) abrasion that reproduces the shape of the ligating material, and it is presumed homicidal until proven otherwise.\n\nBoth throttling and ligature strangulation are, by definition or by default, homicidal. Throttling is always homicidal. Ligature strangulation is homicidal or accidental, never suicidal. Hanging, by contrast, can be suicidal, homicidal or accidental, and the manner is never assumed from the mechanism alone.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__9__vg1yxc",
+        "number": "9",
+        "text": "True about the frothy secretions in drowning:",
+        "options": [
+          "Bloody",
+          "Turbid",
+          "White and Fine",
+          "Coarse",
+          "Offensive"
+        ],
+        "originalOptions": [
+          "Bloody",
+          "Turbid",
+          "White and Fine",
+          "Coarse",
+          "Offensive"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctAnswer": "C) White and Fine",
+        "correctAnswerText": "White and Fine",
+        "correctIndex": 2,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "C",
+        "explanation": "Drowning froth is white (may be pink-tinged), fine, lathery, tenacious and persistent. Coarse, offensive froth is putrefactive, not drowning froth.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Froth at the mouth and nostrils is a sure external sign of drowning and an ante-mortem sign. It forms from air, water and mucus whipped together by continued respiratory effort. It will not form if the body was already dead and was dumped in the water afterward.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Drowning froth</th><th>Putrefactive froth</th></tr>\n</thead>\n<tbody>\n<tr><td>Colour</td><td>White (may be pink-tinged)</td><td>Red-brown</td></tr>\n<tr><td>Texture</td><td>Fine, lathery</td><td>Coarse</td></tr>\n<tr><td>Persistence</td><td>Tenacious and persistent, re-forms after wiping</td><td>Not described as persistent</td></tr>\n<tr><td>Smell</td><td>Not described</td><td>Offensive</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__10__khvhp5",
+        "number": "10",
+        "text": "Froth after drowning is:",
+        "options": [
+          "White fine",
+          "Turbid",
+          "Hemorrhagic"
+        ],
+        "originalOptions": [
+          "White fine",
+          "Turbid",
+          "Hemorrhagic"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctAnswer": "A) White fine",
+        "correctAnswerText": "White fine",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Drowning froth is white (may be pink-tinged), fine and lathery, formed from air, water and mucus. Bloody or coarse froth does not describe it.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The signs of drowning separate into sure and probable ones.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Category</th><th>Sign</th><th>Meaning</th></tr>\n</thead>\n<tbody>\n<tr><td>Sure external</td><td>Froth at the mouth and/or nostrils</td><td>Ante-mortem sign: the victim was alive and breathing when entering the water</td></tr>\n<tr><td>Sure external</td><td>Cadaveric spasm</td><td>Ante-mortem sign: proof of life at entry into water (e.g. clutched weeds)</td></tr>\n<tr><td>Probable</td><td>Cyanosis</td><td>Related to anoxic anoxia</td></tr>\n<tr><td>Probable</td><td>Pale, wet skin; goose skin; washerwoman's skin</td><td>Related to the body being in water</td></tr>\n<tr><td>Probable</td><td>Post-mortem injuries (animal bites, water movement, sand or rocks)</td><td>Occur after death in water</td></tr>\n</tbody>\n</table>\n\nThe key investigative question is whether the person was alive when they went into the water or already dead. Froth and cadaveric spasm answer it.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__11__e1ejc8",
+        "number": "11",
+        "text": "The dead body is lying on autopsy table. There is leathery, fine, tenacious, persistent froth at mouth and nostrils. The death is due to:",
+        "options": [
+          "Barbiturate poisoning",
+          "Drowning",
+          "Opium poisoning",
+          "Throttling",
+          "Traumatic Asphyxia"
+        ],
+        "originalOptions": [
+          "Barbiturate poisoning",
+          "Drowning",
+          "Opium poisoning",
+          "Throttling",
+          "Traumatic Asphyxia"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctAnswer": "B) Drowning",
+        "correctAnswerText": "Drowning",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Fine, tenacious, persistent froth at the mouth and nostrils is the sure external sign of drowning. It is formed by respiratory effort during submersion.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Drowning is mechanical anoxic death due to submersion of the respiratory openings under water.\n\nCauses of death:\n- direct cause: mechanical anoxia\n- indirect causes: reflex cardiac inhibition from vagal stimulation, and head injury or other fatal injuries sustained before or during submersion\n\nThe manner may be homicidal, suicidal or accidental. Water immersion alters the usual timeline of post-mortem changes, so cooling, hypostasis, adipocere and putrefaction are all affected. This matters when estimating time of death.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__12__vi3ce4",
+        "number": "12",
+        "text": "In drowning, the finding most indicative of TIME PASSED since death:",
+        "options": [
+          "Washerwoman skin (skin maceration)",
+          "Froth at mouth/nostrils",
+          "Goose skin appearance",
+          "Coldness of the body"
+        ],
+        "originalOptions": [
+          "Washerwoman skin (skin maceration)",
+          "Froth at mouth/nostrils",
+          "Goose skin appearance",
+          "Coldness of the body"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Washerwoman skin (skin maceration)",
+        "correctAnswerText": "Washerwoman skin (skin maceration)",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Washerwoman's skin shows how long the body has been in water (time since immersion), not the cause of death. Froth indicates life at entry into the water.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Maceration of the hands and feet begins within hours and progresses to peeling (\"glove and stocking\" skin) over days to weeks, faster in warm water. A body dumped after death macerates too, so it cannot show that the person drowned.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Sign</th><th>What it tells you</th></tr>\n</thead>\n<tbody>\n<tr><td>Froth at mouth/nostrils</td><td>Alive and breathing at submersion (ante-mortem)</td></tr>\n<tr><td>Cadaveric spasm</td><td>Alive at entry into the water (ante-mortem)</td></tr>\n<tr><td>Washerwoman's skin</td><td>Duration of immersion</td></tr>\n<tr><td>Goose skin (cutis anserina)</td><td>Probable sign related to the body being in water</td></tr>\n</tbody>\n</table>\n\nNote that the guide words this sign as time since immersion.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__13__lbj713",
+        "number": "13",
+        "text": "In drowning – one is indicated for time passed since death:",
+        "options": [
+          "Washerwoman skin (maceration)",
+          "Froth at mouth/nostrils",
+          "Goose skin appearance",
+          "Coldness of the body"
+        ],
+        "originalOptions": [
+          "Washerwoman skin (maceration)",
+          "Froth at mouth/nostrils",
+          "Goose skin appearance",
+          "Coldness of the body"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Washerwoman skin (maceration)",
+        "correctAnswerText": "Washerwoman skin (maceration)",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Maceration progresses with time in water, so it indicates how long the body has been immersed. Froth is an ante-mortem sign of drowning, not a measure of time.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Being in water changes the normal timeline of post-mortem changes. Cooling, hypostasis, adipocere and putrefaction are all altered by immersion.\n\n- Decomposition in water is slow, because of exclusion of air, protection by clothes and early cooling.\n- Hypostasis in drowning is often faint, because moving water keeps turning the body. A floating body usually lies face-down with the head dependent, so lividity appears in the face, upper chest and upper limbs.\n- Washerwoman's skin is a time-in-water marker. Goose skin is a probable sign related to the body being in water.\n\nFor these reasons, time-of-death estimates in drowning cases have to be made cautiously.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__14__1y2os5",
+        "number": "14",
+        "text": "Traumatic asphyxia shows:",
+        "options": [
+          "Pale skin below neck",
+          "Line of demarcation",
+          "Cherry red color",
+          "Adipocere formation"
+        ],
+        "originalOptions": [
+          "Pale skin below neck",
+          "Line of demarcation",
+          "Cherry red color",
+          "Adipocere formation"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Line of demarcation",
+        "correctAnswerText": "Line of demarcation",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Chest compression blocks venous return from the head. This causes intense congestion and petechiae above the level of compression, ending at a sharp line of demarcation.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Traumatic asphyxia occurs when a heavy weight presses on the chest or upper abdomen and makes respiration impossible. It is typically seen in \"riot-crush\", when a crowd compresses the chest.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Aspect</th><th>Details</th></tr>\n</thead>\n<tbody>\n<tr><td>Causes of death</td><td>Mechanical anoxia, injury to vital organs, positional asphyxia where mechanisms overlap</td></tr>\n<tr><td>Findings</td><td>Contusions and abrasions of the chest and abdomen, fractured ribs, rupture of internal organs</td></tr>\n<tr><td>Skin picture</td><td>Intense congestion, cyanosis and huge numbers of petechiae over face, neck and upper chest; line of demarcation between the discoloured upper body and the normal lower part</td></tr>\n<tr><td>Manner</td><td>Mostly accidental, may be homicidal</td></tr>\n</tbody>\n</table>\n\nCherry-red colour belongs to carbon monoxide poisoning, and adipocere is a late post-mortem change.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__15__cer1cz",
+        "number": "15",
+        "text": "Clear line of demarcation on the neck is always seen in:",
+        "options": [
+          "Hanged body",
+          "Traumatic asphyxia",
+          "Gagging",
+          "Drowning"
+        ],
+        "originalOptions": [
+          "Hanged body",
+          "Traumatic asphyxia",
+          "Gagging",
+          "Drowning"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Traumatic asphyxia",
+        "correctAnswerText": "Traumatic asphyxia",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Traumatic asphyxia produces a sharp line of demarcation at the level of chest compression, between the discoloured upper body and the normal lower part.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The line of demarcation is the signature of traumatic asphyxia. It marks the level of compression. Above it the face, neck and upper chest show intense congestion, cyanosis and numerous petechiae (an \"ecchymotic mask\"). Below it the body looks normal.\n\nThe cause is blocked venous return from the head. Hanging, gagging and drowning do not produce this pattern. Gagging means a cloth is pushed into or across the mouth, with progressive asphyxia as the nares close from mucus and oedema.\n\nIn the guide the line is at the level of compression, which is usually the chest or upper abdomen, rather than literally on the neck.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__16__xx8dfe",
+        "number": "16",
+        "text": "Petechial hemorrhages are typically seen in which condition?",
+        "options": [
+          "Road traffic accidents",
+          "Riot crush asphyxia",
+          "Cardiac tamponade",
+          "Heat stroke"
+        ],
+        "originalOptions": [
+          "Road traffic accidents",
+          "Riot crush asphyxia",
+          "Cardiac tamponade",
+          "Heat stroke"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Riot crush asphyxia",
+        "correctAnswerText": "Riot crush asphyxia",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Massive petechiae over the face, neck and upper chest point to traumatic (crush or riot) asphyxia.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Petechiae are pinpoint haemorrhages from rupture of small vessels, predominantly small venules. The rupture appears to be mechanical, caused by sudden over-distension after an abrupt rise in intravascular pressure. They are found above the level of the obstruction. The most common sites are the visceral pleura and the epicardium. They also appear in the conjunctivae and sclerae, where venules are unsupported by surrounding tissue.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Classical sign</th><th>What it is</th></tr>\n</thead>\n<tbody>\n<tr><td>Congestion</td><td>Red face and head from venous filling when venous return is obstructed</td></tr>\n<tr><td>Oedema</td><td>Transudation of fluid from veins under raised venous pressure</td></tr>\n<tr><td>Cyanosis</td><td>Increase in reduced haemoglobin, observable from about 5 g/100 mL</td></tr>\n<tr><td>Petechiae</td><td>Ruptured venules in skin, eyes, pleura and epicardium</td></tr>\n</tbody>\n</table>\n\nPetechiae are non-specific. They also occur in MI, asthma and whooping cough, so alone they do not prove asphyxia.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__17__57hgpp",
+        "number": "17",
+        "text": "Cause of death in mechanical asphyxia includes all of the following EXCEPT:",
+        "options": [
+          "Anoxia",
+          "Pulmonary edema",
+          "Vagal inhibition (reflex cardiac arrest)",
+          "Sepsis"
+        ],
+        "originalOptions": [
+          "Anoxia",
+          "Pulmonary edema",
+          "Vagal inhibition (reflex cardiac arrest)",
+          "Sepsis"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "D) Sepsis",
+        "correctAnswerText": "Sepsis",
+        "correctIndex": 3,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "D",
+        "explanation": "Mechanical asphyxia kills by anoxia, pulmonary oedema, reflex vagal cardiac inhibition and cerebral ischaemia. Sepsis is not one of these mechanisms.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The underlying mechanism of death in mechanical (violent) asphyxia is usually a combination of neck compression, airway blockage, compression of the chest or face, and chemical asphyxia or lack of oxygen. Delayed glottic oedema can also kill after the ligature is removed.\n\nReflex cardiac arrest works through a defined pathway. Pressure on the carotid sinus sends afferent impulses along the glossopharyngeal nerve (CN IX), and the efferent limb is the vagus (CN X).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Causes of death</th></tr>\n</thead>\n<tbody>\n<tr><td>Hanging</td><td>Cerebral ischaemia (commonest), vagal cardiac inhibition, mechanical anoxia; cord transection in judicial hanging</td></tr>\n<tr><td>Ligature strangulation</td><td>Mechanical anoxia, reflex cardiac inhibition, delayed glottic oedema</td></tr>\n<tr><td>Throttling</td><td>Mechanical anoxia, reflex cardiac inhibition, cerebral anoxia, delayed glottic oedema</td></tr>\n<tr><td>Choking</td><td>Reflex cardiac inhibition, mechanical anoxia</td></tr>\n<tr><td>Drowning</td><td>Mechanical anoxia; indirect: vagal cardiac inhibition, associated head injury</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__18__dkz5ff",
+        "number": "18",
+        "text": "Mechanical asphyxia is type of:",
+        "options": [
+          "Anoxic anoxia",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "originalOptions": [
+          "Anoxic anoxia",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Anoxic anoxia",
+        "correctAnswerText": "Anoxic anoxia",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "In mechanical (violent) asphyxia, an external force obstructing the airway prevents enough oxygen reaching the blood. This is anoxic anoxia.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Hypoxia means low oxygen and anoxia means without oxygen. Each type of anoxia corresponds to a failure at a different point in the oxygen chain.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Problem</th><th>Examples</th></tr>\n</thead>\n<tbody>\n<tr><td>Anoxic</td><td>Not enough oxygen reaches the blood</td><td>High altitude, respiratory centre depression (morphine), paralysis (anaesthetics, Guillain–Barré), mechanical asphyxia, pulmonary embolism</td></tr>\n<tr><td>Anaemic</td><td>Blood cannot carry oxygen properly</td><td>Severe anaemia, CO (carboxyhaemoglobin), haemolysis, haemorrhage</td></tr>\n<tr><td>Stagnant</td><td>Circulation or delivery to tissue fails</td><td>Shock, heart failure, local vascular obstruction</td></tr>\n<tr><td>Histotoxic</td><td>Tissues cannot use delivered oxygen</td><td>Cyanide (cytochrome oxidase inhibition)</td></tr>\n</tbody>\n</table>\n\nOnce the airway is obstructed, three stages follow: forced respiration, convulsions, and paralysis. Death occurs in about 5 minutes overall.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__19__s1lp6r",
+        "number": "19",
+        "text": "The cause of death in an environment with DECREASED O2 levels will be:",
+        "options": [
+          "Anoxic Anoxia",
+          "Anemic Anoxia",
+          "Mechanical Anoxia",
+          "Histotoxic Anoxia"
+        ],
+        "originalOptions": [
+          "Anoxic Anoxia",
+          "Anemic Anoxia",
+          "Mechanical Anoxia",
+          "Histotoxic Anoxia"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Anoxic Anoxia",
+        "correctAnswerText": "Anoxic Anoxia",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Low ambient oxygen (e.g. high altitude) means too little oxygen enters the blood, which is anoxic anoxia. This is the ambient subtype.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Anoxic anoxia has several subtypes. Mechanical is only one of them, so the option \"mechanical anoxia\" does not describe a low-oxygen atmosphere.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Subtype of anoxic anoxia</th><th>Mechanism</th><th>Example</th></tr>\n</thead>\n<tbody>\n<tr><td>Ambient</td><td>Low ambient oxygen</td><td>High altitude</td></tr>\n<tr><td>Central</td><td>Depression of the respiratory centre</td><td>Morphine overdose, medullary herniation</td></tr>\n<tr><td>Paralytic</td><td>Peripheral nerve injury or drug paralysis</td><td>Anaesthetic drugs, Guillain–Barré</td></tr>\n<tr><td>Mechanical (violent asphyxia)</td><td>External force obstructing the airway</td><td>Smothering, gagging, choking, strangulation</td></tr>\n<tr><td>Pulmonary blood flow obstruction</td><td>No perfusion of the lung</td><td>Pulmonary embolism</td></tr>\n</tbody>\n</table>\n\nNormal oxygenation requires an oxygen-containing environment, a patent airway, normal lungs, blood supply to the lungs, a working respiratory centre, a normal chest wall, a functioning heart and blood able to carry oxygen.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__20__yqqtna",
+        "number": "20",
+        "text": "NOT of the TRIAD features of asphyxia:",
+        "options": [
+          "Congestion",
+          "Fluid in the left side of the heart",
+          "Cyanosis of face and chest",
+          "Petechial hemorrhages in skin of face and eyes"
+        ],
+        "originalOptions": [
+          "Congestion",
+          "Fluid in the left side of the heart",
+          "Cyanosis of face and chest",
+          "Petechial hemorrhages in skin of face and eyes"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) Fluid in the left side of the heart",
+        "correctAnswerText": "Fluid in the left side of the heart",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "The exam triad is congestion, cyanosis and petechial haemorrhages. Fluid in the left side of the heart is not a feature of asphyxia.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The classical features of asphyxia are found where air passages are obstructed by pressure on the neck or chest: congestion, oedema, cyanosis and petechial haemorrhages. Exam questions often use the triad of congestion, cyanosis and petechiae. Older texts describe a distended right heart and engorged great veins, not fluid in the left heart.\n\nPoints to remember:\n- Increased fluidity of the blood was taught as a fifth classical feature but is now rejected, a classic exam trap.\n- The signs are very non-specific and unreliable. Even several together do not prove mechanical asphyxia.\n- If death occurs very rapidly, the signs may not have time to develop.\n- The slower the death, the more prominent the signs.\n- The correct approach combines history and circumstances, exclusion of other causes and cautious evaluation of the signs.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__21__uv7usc",
+        "number": "21",
+        "text": "How are antemortem hangings diagnosed?",
+        "options": [
+          "By the presence of cadaveric spasm",
+          "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+          "By livor mortis pattern",
+          "By scene markers only"
+        ],
+        "originalOptions": [
+          "By the presence of cadaveric spasm",
+          "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+          "By livor mortis pattern",
+          "By scene markers only"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "B) By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+        "correctAnswerText": "By vital reaction signs (hemorrhage in ligature mark, skin abrasion)",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Ante-mortem hanging is proved by vital reaction in the ligature mark: bruising or haemorrhage in the base and margins of the groove, reddened edges, and inflammatory cells on histology.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "A body hanged after death shows a pale, parchment-like groove with no vital reaction. In ante-mortem hanging the ligature mark shows bruising and haemorrhage in the base and margins, with reddened edges and inflammatory cells on histology. Supporting findings are dribbling of saliva, congestion and petechiae above the mark, and carotid intimal tears.\n\nCaution on timing: white blood cells remain capable of movement for up to 12 hours after cardiac arrest. This makes microscopic identification of a vital reaction of doubtful reliability when judging ante- versus post-mortem timing.\n\nCadaveric spasm and livor patterns are not the diagnostic test for ante-mortem hanging.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__22__z4g4h2",
+        "number": "22",
+        "text": "Sign of antemortem hanging:",
+        "options": [
+          "Salivation / dripping of saliva",
+          "Tardieu spots only",
+          "No findings",
+          "Congestion alone"
+        ],
+        "originalOptions": [
+          "Salivation / dripping of saliva",
+          "Tardieu spots only",
+          "No findings",
+          "Congestion alone"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Salivation / dripping of saliva",
+        "correctAnswerText": "Salivation / dripping of saliva",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Dribbling of saliva is the most important sign for hanging and is an ante-mortem sign.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "The post-mortem picture of hanging has general and special features.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Feature</th><th>Finding in hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Tongue</td><td>Protrusion</td></tr>\n<tr><td>Saliva</td><td>Dribbling: the most important sign, ante-mortem</td></tr>\n<tr><td>Hypostasis</td><td>Lower half of the body</td></tr>\n<tr><td>Neck</td><td>Elongated, with the head tilted to the opposite side from the suspension point</td></tr>\n<tr><td>Ligature mark</td><td>High, oblique and incomplete, with an imprint of the ligature material</td></tr>\n</tbody>\n</table>\n\nAsphyxial signs are non-specific: congestion alone or petechiae alone do not prove hanging.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__23__q1p56e",
+        "number": "23",
+        "text": "Dripping of saliva occurs in:",
+        "options": [
+          "Antemortem hanging",
+          "Postmortem hanging",
+          "Drowning",
+          "Strangulation"
+        ],
+        "originalOptions": [
+          "Antemortem hanging",
+          "Postmortem hanging",
+          "Drowning",
+          "Strangulation"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Antemortem hanging",
+        "correctAnswerText": "Antemortem hanging",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Dribbling of saliva is an ante-mortem sign of hanging, so it is not seen in a body hanged after death.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Saliva dribbling is the most important sign for hanging. It is an ante-mortem finding, which makes it useful in separating a true hanging from a body strung up after death. It differs between the two forms of hanging.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Dribbling of saliva</td><td>Positive</td><td>Negative</td></tr>\n<tr><td>Tear in carotid intima</td><td>Positive</td><td>Negative</td></tr>\n<tr><td>Face</td><td>Less congested, sometimes pale</td><td>Markedly congested</td></tr>\n</tbody>\n</table>\n\nManner may be suicidal, homicidal or accidental.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__24__8r34up",
+        "number": "24",
+        "text": "Hypostasis in lower limbs is a sign of:",
+        "options": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Strangulation"
+        ],
+        "originalOptions": [
+          "Complete hanging",
+          "Incomplete hanging",
+          "Strangulation"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctAnswer": "A) Complete hanging",
+        "correctAnswerText": "Complete hanging",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "In complete hanging the body is fully suspended, so blood pools in the dependent lower half. In incomplete hanging the hypostasis follows whichever part touches the ground.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "After death, blood moves only under gravity, so lividity shows the posture of the body. Lividity starts immediately, is apparent after about 2 hours, and begins to fix around 6–8 hours. Before fixation it can shift if the body is moved. A body moved after death may show two overlapping patterns (dual lividity).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Body position</th><th>Distribution of lividity</th></tr>\n</thead>\n<tbody>\n<tr><td>Vertical (hanging)</td><td>Distal: legs, feet, hands</td></tr>\n<tr><td>Incomplete hanging</td><td>According to the part touching the ground</td></tr>\n<tr><td>Drowning (floating face-down)</td><td>Chest, upper chest, upper limbs</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__25__2f5k94",
+        "number": "25",
+        "text": "Abrasions around the mouth indicate:",
+        "options": [
+          "Smothering",
+          "Throttling",
+          "Hanging",
+          "Drowning"
+        ],
+        "originalOptions": [
+          "Smothering",
+          "Throttling",
+          "Hanging",
+          "Drowning"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Smothering",
+        "correctAnswerText": "Smothering",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Smothering involves a hand or soft object over the nose and mouth. Fingernail abrasions around the nose and mouth are classic.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Smothering is mechanical anoxic death caused by occlusion of the external respiratory openings by the hand or soft objects. Findings are multiple contusions and fingernail abrasions, contusions in the buccal mucosa, and ventral hypostasis in cot death. If the victim struggles, there may be bruises and abrasions on the face and lips and inside the mouth, where the lips are pressed against the teeth.\n\nSmothering may leave almost no signs.\n- Pressure over the nose and mouth only very rarely causes petechiae, significant cyanosis or congestion unless the victim struggles.\n- It may be virtually impossible to diagnose in the old, the infirm or the very young. This matters for elder abuse and infant deaths that may be mistaken for natural or SIDS deaths.\n- Plastic bag suffocation typically shows no classic asphyxial signs, and the face is usually pale. The \"Exit\" method is an example.\n\nManner is homicidal or accidental.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__26__xrf9ge",
+        "number": "26",
+        "text": "Manner of death in choking:",
+        "options": [
+          "Accidental",
+          "Homicidal",
+          "Suicidal",
+          "Undetermined"
+        ],
+        "originalOptions": [
+          "Accidental",
+          "Homicidal",
+          "Suicidal",
+          "Undetermined"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Accidental",
+        "correctAnswerText": "Accidental",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Choking is mainly accidental, classically a small child choking on a button or small object. Homicidal choking is possible in principle but rare.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Choking is mechanical anoxic death from occlusion of the respiratory passages from inside, at the larynx, classically by a foreign body. It can cause sudden cardiac death through vagal reflex pathways, not only by blocking airflow. Causes of death are reflex cardiac inhibition and mechanical anoxia.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Type</th><th>Site/mechanism of obstruction</th><th>Manner</th></tr>\n</thead>\n<tbody>\n<tr><td>Smothering</td><td>External openings (nose, mouth) occluded by hand or soft object</td><td>Homicidal or accidental</td></tr>\n<tr><td>Gagging</td><td>Cloth pushed into or across the mouth; breathing continues via the nose at first</td><td>Often seen in robbery</td></tr>\n<tr><td>Choking</td><td>Respiratory passages occluded from inside, at the larynx</td><td>Mainly accidental</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__27__wikim0",
+        "number": "27",
+        "text": "Histotoxic anoxia is caused by:",
+        "options": [
+          "CO",
+          "Morphine",
+          "HCN (hydrogen cyanide)",
+          "Barbiturates"
+        ],
+        "originalOptions": [
+          "CO",
+          "Morphine",
+          "HCN (hydrogen cyanide)",
+          "Barbiturates"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "C) HCN (hydrogen cyanide)",
+        "correctAnswerText": "HCN (hydrogen cyanide)",
+        "correctIndex": 2,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "C",
+        "explanation": "Cyanide inhibits cytochrome oxidase, so tissues cannot use oxygen even though delivery is normal. This is histotoxic anoxia.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "In histotoxic anoxia, oxygen is delivered normally but the cells cannot use it. The classic cause is cyanide, which inhibits cytochrome oxidase. The same mitochondrial enzyme is affected by carbon monoxide, discussed in the toxicology section.\n\nHow the other options relate:\n- CO is classed as anaemic anoxia in the guide: it forms carboxyhaemoglobin, which reduces the blood's ability to carry oxygen.\n- Morphine causes anoxic anoxia of the central type, by depressing the respiratory centre.\n\nLividity colour is cherry pink in CO poisoning, in cold, and in cyanide poisoning.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__28__e0f4gb",
+        "number": "28",
+        "text": "Complete hanging is related to:",
+        "options": [
+          "Height",
+          "Weight",
+          "Gender",
+          "Degree of suspension"
+        ],
+        "originalOptions": [
+          "Height",
+          "Weight",
+          "Gender",
+          "Degree of suspension"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "D) Degree of suspension",
+        "correctAnswerText": "Degree of suspension",
+        "correctIndex": 3,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "D",
+        "explanation": "Complete hanging means the full body weight is suspended with the feet off the ground. Incomplete hanging is partial suspension.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "A common misconception is that hanging requires the full body weight to be suspended in the air. Incomplete hanging, with feet or knees still touching the ground, can still be fatal. A hanging survivor should be kept under observation even if apparently well, because laryngeal oedema from neck compression may compromise the airway later.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Complete hanging</th><th>Incomplete hanging</th></tr>\n</thead>\n<tbody>\n<tr><td>Other name</td><td>High point hanging</td><td>Low point hanging</td></tr>\n<tr><td>Touching the ground</td><td>Negative</td><td>Positive</td></tr>\n<tr><td>Main cause of death</td><td>Cerebral ischaemia</td><td>Asphyxia</td></tr>\n<tr><td>Hypostasis</td><td>Lower half of the body</td><td>According to the part touching the ground</td></tr>\n<tr><td>Knot</td><td>Fixed knot or running noose</td><td>Always a running noose</td></tr>\n<tr><td>Ligature mark</td><td>Incomplete, above the thyroid cartilage, oblique, deep, fading toward the suspension point</td><td>Complete, below the thyroid cartilage, transverse, deep all through</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__29__r78o44",
+        "number": "29",
+        "text": "Death of 65-year-old person dropped in sea water. Skin showing goose skin appearance, hair easily removed. Right hand grasping forcefully grass weeds. This is consistent with:",
+        "options": [
+          "Mummification",
+          "Cadaveric spasm",
+          "Adipocere changes",
+          "Anoxemia",
+          "Usual postmortem stiffening"
+        ],
+        "originalOptions": [
+          "Mummification",
+          "Cadaveric spasm",
+          "Adipocere changes",
+          "Anoxemia",
+          "Usual postmortem stiffening"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctAnswer": "B) Cadaveric spasm",
+        "correctAnswerText": "Cadaveric spasm",
+        "correctIndex": 1,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "B",
+        "explanation": "Forceful grasping of weeds or grass in a drowning victim is cadaveric spasm. It proves the person was alive at the time of entry into the water.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Cadaveric spasm (instantaneous rigor) occurs at the moment of death and may persist into the period of rigor mortis. Its cause is unknown, but it is usually associated with violent deaths with intense emotion. It affects only selected muscles that were contracted at death, and it often demonstrates the last activity before death, for example gripping a knife.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Point</th><th>Rigor mortis</th><th>Cadaveric spasm</th></tr>\n</thead>\n<tbody>\n<tr><td>Onset</td><td>Delayed, 2–3 hours</td><td>Instantaneous</td></tr>\n<tr><td>Duration</td><td>Up to 36 hours</td><td>A few hours, until replaced by rigor</td></tr>\n<tr><td>Intensity</td><td>Comparatively moderate</td><td>Comparatively very strong</td></tr>\n<tr><td>Mechanism</td><td>ATP falls below a critical level</td><td>Unknown</td></tr>\n<tr><td>Muscles</td><td>All muscles, gradually</td><td>Only muscles contracted at death</td></tr>\n</tbody>\n</table>\n\nGoose skin is a probable drowning sign. Cadaveric spasm is one of the sure ante-mortem drowning signs.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__30__c6s3a3",
+        "number": "30",
+        "text": "Guillain-Barré syndrome (GBS) causes what type of anoxia:",
+        "options": [
+          "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "originalOptions": [
+          "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+        "correctAnswerText": "Anoxic anoxia (hypoxic hypoxia) – respiratory muscle paralysis prevents air entry",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "Guillain–Barré causes paralytic anoxic anoxia. Peripheral nerve injury stops respiration, so not enough oxygen reaches the blood.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Anoxic anoxia means oxygen does not reach the blood in adequate amounts. The paralytic subtype covers anaesthetic drugs and Guillain–Barré syndrome with peripheral nerve injury. It should be distinguished from the central subtype (respiratory centre depression, e.g. morphine overdose or medullary herniation).\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Site of failure</th><th>Example</th></tr>\n</thead>\n<tbody>\n<tr><td>Respiratory centre</td><td>Morphine overdose, medullary herniation</td></tr>\n<tr><td>Peripheral nerves / muscles</td><td>Guillain–Barré, anaesthetic drugs</td></tr>\n<tr><td>Airway</td><td>Mechanical asphyxia</td></tr>\n<tr><td>Pulmonary blood flow</td><td>Pulmonary embolism</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__31__hce3nw",
+        "number": "31",
+        "text": "What type of asphyxia is caused by cyanide (HCN)?",
+        "options": [
+          "Anoxic anoxia",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "originalOptions": [
+          "Anoxic anoxia",
+          "Anemic anoxia",
+          "Stagnant anoxia",
+          "Histotoxic anoxia"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "D) Histotoxic anoxia",
+        "correctAnswerText": "Histotoxic anoxia",
+        "correctIndex": 3,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "D",
+        "explanation": "Cyanide inhibits cytochrome oxidase. Oxygen is delivered normally, but the tissues cannot retrieve it.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "Histotoxic anoxia is a failure at the cellular level. Oxygen is in the environment, the airway is patent, the lungs and blood are normal and delivery is intact, but the cells cannot use the oxygen.\n\nContrasts with the other types:\n- Anoxic: not enough oxygen reaches the blood.\n- Anaemic: the blood cannot carry oxygen, as in CO poisoning.\n- Stagnant: delivery fails, as in shock or heart failure.\n\nOther points the guide gives about cyanide:\n- It is listed among chemical asphyxiants, alongside carbon monoxide and hydrogen sulfide, where inhalation prevents utilisation of oxygen at the cellular level.\n- Lividity is cherry pink.\n- Rigor mortis develops early.\n- It is not a cause of apparent death, because it causes rapid true death.",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      },
+      {
+        "id": "forensic__lecture__asphyxia__32__n0emrz",
+        "number": "32",
+        "text": "Vagus nerve shares the same root with:",
+        "options": [
+          "Glossopharyngeal (CN IX)",
+          "Trochlear nerve",
+          "Facial nerve",
+          "Temporal nerve"
+        ],
+        "originalOptions": [
+          "Glossopharyngeal (CN IX)",
+          "Trochlear nerve",
+          "Facial nerve",
+          "Temporal nerve"
+        ],
+        "optionLetters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctAnswer": "A) Glossopharyngeal (CN IX)",
+        "correctAnswerText": "Glossopharyngeal (CN IX)",
+        "correctIndex": 0,
+        "correctIndices": [],
+        "isMultiple": false,
+        "correctAnswerLetter": "A",
+        "explanation": "CN IX and CN X arise together from the medulla and leave the skull through the jugular foramen.",
+        "batchName": "",
+        "batchNames": [],
+        "note": "",
+        "eshrahly": "This anatomy underlies reflex cardiac arrest in neck compression. Pressure on the carotid sinus sends afferent impulses along the glossopharyngeal nerve (CN IX). The efferent limb is the vagus (CN X), which inhibits the heart. Vagal cardiac inhibition can therefore cause death without prolonged anoxia.\n\n<table class=\"eshrahly-table\">\n<thead>\n<tr><th>Condition</th><th>Reflex/vagal contribution to death</th></tr>\n</thead>\n<tbody>\n<tr><td>Hanging</td><td>Vagal cardiac inhibition</td></tr>\n<tr><td>Ligature strangulation</td><td>Reflex cardiac inhibition</td></tr>\n<tr><td>Throttling</td><td>Reflex cardiac inhibition</td></tr>\n<tr><td>Choking</td><td>Reflex cardiac inhibition (a foreign body in the larynx can trigger vagal bronchospasm and stop the heart)</td></tr>\n<tr><td>Drowning</td><td>Indirect cause: reflex cardiac inhibition from vagal stimulation</td></tr>\n</tbody>\n</table>",
+        "pageNumber": "",
+        "subjectName": "Forensic",
+        "subjectId": "forensic",
+        "lectureName": "Asphyxia",
+        "groupName": "Asphyxia",
+        "sourceType": "lecture"
+      }
+    ],
+    "totalQuestions": 32,
+    "totalLectures": 1,
+    "hasAiFolder": false
+  }
+]
