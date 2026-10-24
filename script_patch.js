@@ -886,31 +886,36 @@
     }, 0);
   };
 
-  prepareQuestionForExam = function(question){
+    prepareQuestionForExam = function(question){
     const clone = JSON.parse(JSON.stringify(question));
-    const baseOptions = (clone.options || []).map(opt => stripOptionPrefix(opt));
-    clone.originalOptions = baseOptions.slice();
-    clone.options = baseOptions.slice();
-    if (clone.isMultiple) {
-      clone.correctAnswerText = clone.correctAnswer;
-    } else {
-      clone.correctAnswerText = getCorrectAnswerText({ ...clone, options: baseOptions, originalOptions: baseOptions.slice() });
-      clone.correctAnswer = clone.correctAnswerText;
-      clone.correctIndex = resolveCorrectIndex(clone.options, clone.correctAnswerText);
-    }
-    return clone;
+
+    clone.optionLetters = getOptionLetters(clone);
+    clone.options = Array.isArray(clone.options) ? clone.options.slice() : [];
+    clone.originalOptions = clone.options.slice();
+
+    return applyCorrectAnswerKey(clone);
   };
 
-  window.isAnswerCorrect = function(q, ans) {
-    if (!q) return false;
-    if (q.isMultiple) {
-      if (!Array.isArray(ans) || !Array.isArray(q.correctIndices)) return false;
-      if (ans.length !== q.correctIndices.length) return false;
-      const sortedAns = [...ans].sort();
-      const sortedCorr = [...q.correctIndices].sort();
-      return sortedAns.every((val, index) => val === sortedCorr[index]);
+  window.isAnswerCorrect = function(q, answer){
+    if(!q) return false;
+
+    applyCorrectAnswerKey(q);
+
+    const validIndex = index =>
+      Number.isInteger(index) && index >= 0 && index < q.options.length;
+
+    if(q.isMultiple){
+      return Array.isArray(answer)
+        && q.correctIndices.length > 0
+        && answer.length === q.correctIndices.length
+        && answer.every(validIndex)
+        && new Set(answer).size === answer.length
+        && answer.every(index => q.correctIndices.includes(index));
     }
-    return ans === q.correctIndex;
+
+    return validIndex(answer)
+      && q.correctIndex >= 0
+      && answer === q.correctIndex;
   };
 
   window.selectOption = function(index) {
@@ -1040,15 +1045,9 @@
   };
 
   function cleanOptionDisplayLocal(text){ return String(text||'').replace(/\u200C+/g,''); }
-  function getFormattedCurrentCorrectAnswerLocal(q){
-    if (q.isMultiple) {
-      if (!q.correctIndices || !q.correctIndices.length) return cleanOptionDisplayLocal(q.correctAnswerText || q.correctAnswer || '');
-      return q.correctIndices.map(idx => `${LETTERS[idx]}) ${cleanOptionDisplayLocal(q.options[idx])}`).join(' / ');
-    }
-    const idx = getCorrectIndex(q);
-    if(idx < 0) return cleanOptionDisplayLocal(getCorrectAnswerText(q) || q.correctAnswerText || q.correctAnswer || '');
-    return `${LETTERS[idx]}) ${cleanOptionDisplayLocal(q.options[idx])}`;
-  }
+    function getFormattedCurrentCorrectAnswerLocal(q){
+    return getFormattedCurrentCorrectAnswer(q);
+  }  
 
   function renderOptionButtonLocal(q, opt, i, showAnswerState, userAnswer){
     if (q.isMultiple) {
@@ -1059,7 +1058,7 @@
          if (q.correctIndices && q.correctIndices.includes(i)) cls += ' correct';
          else if (isChecked && q.correctIndices && !q.correctIndices.includes(i)) cls += ' wrong';
       }
-      return `<div class="${cls}" onclick="selectOption(${i})"><div class="checkbox-box ${isChecked ? 'checked' : ''}"></div><span class="option-label">${LETTERS[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
+            return `<div class="${cls}" onclick="selectOption(${i})"><div class="checkbox-box ${isChecked ? 'checked' : ''}"></div><span class="option-label">${getOptionLetters(q)[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
     } else {
       let cls='option-btn';
       if(userAnswer===i) cls+=' selected';
@@ -1068,7 +1067,7 @@
         if(i===correctIdx) cls+=' correct';
         else if(userAnswer===i && i!==correctIdx) cls+=' wrong';
       }
-      return `<button class="${cls}" onclick="selectOption(${i})"><span class="option-label">${LETTERS[i]})</span>${escapeHtml(cleanOptionDisplayLocal(opt))}</button>`;
+            return `<button class="${cls}" onclick="selectOption(${i})"><span class="option-label">${getOptionLetters(q)[i]})</span>${escapeHtml(cleanOptionDisplayLocal(opt))}</button>`;
     }
   }
 
@@ -1102,9 +1101,9 @@
       if (q.isMultiple) {
          let isCorr = q.correctIndices && q.correctIndices.includes(i);
          let cls = 'option-btn multi-option-btn' + (isCorr ? ' correct' : '');
-         return `<div class="${cls}" style="cursor:default;"><div class="checkbox-box ${isCorr ? 'checked' : ''}"></div><span class="option-label">${LETTERS[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
+                  return `<div class="${cls}" style="cursor:default;"><div class="checkbox-box ${isCorr ? 'checked' : ''}"></div><span class="option-label">${getOptionLetters(q)[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
       } else {
-         return '<div class="option-btn '+(i===correctIdx?'correct':'')+'" style="cursor:default;"><span class="option-label">'+LETTERS[i]+')</span>'+escapeHtml(cleanOptionDisplayLocal(opt))+'</div>';
+                  return '<div class="option-btn '+(i===correctIdx?'correct':'')+'" style="cursor:default;"><span class="option-label">'+getOptionLetters(q)[i]+')</span>'+escapeHtml(cleanOptionDisplayLocal(opt))+'</div>';
       }
     }).join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswerLocal(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div>`;
     el('readonly-content').classList.add('readonly-ltr');
@@ -1140,9 +1139,9 @@
           let cls = 'option-btn multi-option-btn';
           if (isCorr) cls += ' correct';
           else if (isChecked && !isCorr) cls += ' wrong';
-          return `<div class="${cls}" style="cursor:default;"><div class="checkbox-box ${isChecked ? 'checked' : ''}"></div><span class="option-label">${LETTERS[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
+                    return `<div class="${cls}" style="cursor:default;"><div class="checkbox-box ${isChecked ? 'checked' : ''}"></div><span class="option-label">${getOptionLetters(q)[i]})</span><div class="option-text">${escapeHtml(cleanOptionDisplayLocal(opt))}</div></div>`;
         } else {
-          let cls='option-btn'; if(i===correctIdx) cls+=' correct'; if(i===userAnswer && i!==correctIdx) cls+=' wrong'; return '<div class="'+cls+'" style="cursor:default;"><span class="option-label">'+LETTERS[i]+')</span>'+escapeHtml(cleanOptionDisplayLocal(opt))+'</div>';
+             let cls='option-btn'; if(i===correctIdx) cls+=' correct'; if(i===userAnswer && i!==correctIdx) cls+=' wrong'; return '<div class="'+cls+'" style="cursor:default;"><span class="option-label">'+getOptionLetters(q)[i]+')</span>'+escapeHtml(cleanOptionDisplayLocal(opt))+'</div>';
         }
       }).join('')}</div><div class="answer-summary"><strong>Correct Answer:</strong> <span class="answer-value">${escapeHtml(getFormattedCurrentCorrectAnswerLocal(q))}</span></div><div class="explanation-box visible"><strong>Explanation:</strong> ${escapeHtml(q.explanation||'No explanation available.')}</div></div>`;
     });
