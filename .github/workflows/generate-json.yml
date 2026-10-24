@@ -31,4 +31,4 @@ jobs:
           git add subjects.json
           git diff --staged --quiet || (git commit -m "🤖 Auto-generate subjects.json" && git push)
         env:
-          GITHUB_TOKEN: ${{ secrets.Sub_Medicin }}
+          GITHUB_TOKEN: ${{ secrets.Test_only }}
