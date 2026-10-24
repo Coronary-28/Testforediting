@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.Sub_Medicin }}
+          token: ${{ secrets.Test_only }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
