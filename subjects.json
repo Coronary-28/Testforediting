@@ -199,9 +199,11 @@
             "isMultiple": false,
             "correctAnswerLetter": "D",
             "explanation": "Extensive neck lacerations, torn sternomastoids and C2–C3 fracture-dislocation (hangman's fracture) with cord transection are the picture of judicial (long-drop) hanging. Ordinary hanging usually causes little internal damage.",
-            "batchName": "",
-            "batchNames": [],
-            "note": "",
+            "batchName": "coronary C",
+            "batchNames": [
+              "coronary C"
+            ],
+            "note": "This is not questions",
             "eshrahly": "Judicial (long-drop) hanging is the form in which the cause of death is transection of the spinal cord, and death is instant. The characteristic findings are extensive neck lacerations, torn sternomastoid muscles, and fracture-dislocation of C2–C3, the \"hangman's fracture\" of C2 (a bilateral pars-articularis fracture). This differs from the other forms of hanging. In suicidal, accidental, incomplete and autoerotic hanging, the neck usually shows only a ligature mark, and death is mainly from cerebral ischaemia, vagal inhibition or mechanical anoxia.\n\nAutoerotic (sexual) asphyxia is usually by hanging, with anoxia induced deliberately to heighten arousal. It can resemble a suicidal hanging, but it does not produce this destructive neck injury.",
             "pageNumber": "",
             "subjectName": "Forensic",
@@ -1297,7 +1299,62 @@
       }
     ],
     "ai": [],
-    "years": [],
+    "years": [
+      {
+        "id": "forensic__year__coronary-c",
+        "name": "coronary C",
+        "type": "year",
+        "subjectName": "Forensic",
+        "questions": [
+          {
+            "id": "forensic__lecture__asphyxia__5__ccfwfk",
+            "number": "5",
+            "text": "The findings on the neck: extensive laceration, tears in sternomastoid and fracture-dislocation of C2-C3 vertebrae. These findings are present in:",
+            "options": [
+              "Suicidal hanging",
+              "Accidental hanging",
+              "Incomplete hanging",
+              "Judicial hanging",
+              "Autoerotic hanging"
+            ],
+            "originalOptions": [
+              "Suicidal hanging",
+              "Accidental hanging",
+              "Incomplete hanging",
+              "Judicial hanging",
+              "Autoerotic hanging"
+            ],
+            "optionLetters": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "correctAnswer": "D) Judicial hanging",
+            "correctAnswerText": "Judicial hanging",
+            "correctIndex": 3,
+            "correctIndices": [],
+            "isMultiple": false,
+            "correctAnswerLetter": "D",
+            "explanation": "Extensive neck lacerations, torn sternomastoids and C2–C3 fracture-dislocation (hangman's fracture) with cord transection are the picture of judicial (long-drop) hanging. Ordinary hanging usually causes little internal damage.",
+            "batchName": "coronary C",
+            "batchNames": [
+              "coronary C"
+            ],
+            "note": "This is not questions",
+            "eshrahly": "Judicial (long-drop) hanging is the form in which the cause of death is transection of the spinal cord, and death is instant. The characteristic findings are extensive neck lacerations, torn sternomastoid muscles, and fracture-dislocation of C2–C3, the \"hangman's fracture\" of C2 (a bilateral pars-articularis fracture). This differs from the other forms of hanging. In suicidal, accidental, incomplete and autoerotic hanging, the neck usually shows only a ligature mark, and death is mainly from cerebral ischaemia, vagal inhibition or mechanical anoxia.\n\nAutoerotic (sexual) asphyxia is usually by hanging, with anoxia induced deliberately to heighten arousal. It can resemble a suicidal hanging, but it does not produce this destructive neck injury.",
+            "pageNumber": "",
+            "subjectName": "Forensic",
+            "subjectId": "forensic",
+            "lectureName": "Asphyxia",
+            "groupName": "Asphyxia",
+            "sourceType": "year",
+            "originalSourceType": "lecture"
+          }
+        ]
+      }
+    ],
     "allQuestions": [
       {
         "id": "forensic__lecture__asphyxia__1__4zwz16",
@@ -1488,9 +1545,11 @@
         "isMultiple": false,
         "correctAnswerLetter": "D",
         "explanation": "Extensive neck lacerations, torn sternomastoids and C2–C3 fracture-dislocation (hangman's fracture) with cord transection are the picture of judicial (long-drop) hanging. Ordinary hanging usually causes little internal damage.",
-        "batchName": "",
-        "batchNames": [],
-        "note": "",
+        "batchName": "coronary C",
+        "batchNames": [
+          "coronary C"
+        ],
+        "note": "This is not questions",
         "eshrahly": "Judicial (long-drop) hanging is the form in which the cause of death is transection of the spinal cord, and death is instant. The characteristic findings are extensive neck lacerations, torn sternomastoid muscles, and fracture-dislocation of C2–C3, the \"hangman's fracture\" of C2 (a bilateral pars-articularis fracture). This differs from the other forms of hanging. In suicidal, accidental, incomplete and autoerotic hanging, the neck usually shows only a ligature mark, and death is mainly from cerebral ischaemia, vagal inhibition or mechanical anoxia.\n\nAutoerotic (sexual) asphyxia is usually by hanging, with anoxia induced deliberately to heighten arousal. It can resemble a suicidal hanging, but it does not produce this destructive neck injury.",
         "pageNumber": "",
         "subjectName": "Forensic",
@@ -2584,7 +2643,7 @@
       }
     ],
     "totalQuestions": 32,
-    "totalLectures": 1,
+    "totalLectures": 2,
     "hasAiFolder": false
   }
 ]
