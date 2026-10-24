@@ -15,7 +15,7 @@ function hashString(input) {
   return Math.abs(h).toString(36);
 }
 function stripOptionPrefix(text) {
-  return String(text || '').replace(/^[A-E][\)\.\-]\s*/i, '').trim();
+    return String(text || '').replace(/^\s*[A-Z]\s*[).\-]\s*/i, '').trim();
 }
 
 function normalizeComparisonText(text) {
@@ -50,19 +50,108 @@ function normalizeText(text) {
   return String(text || '').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\t/g, '    ').replace(/\/\/\/\/\/\//g, '\n').trim();
 }
 
-function resolveCorrectIndex(options, correctAnswer) {
-  if (!Array.isArray(options) || !options.length) return -1;
-  const m = String(correctAnswer || '').match(/^([A-E])/i);
-  if (m) {
-    const ix = m[1].toUpperCase().charCodeAt(0) - 65;
-    if (ix >= 0 && ix < options.length) return ix;
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function extractOptionLetter(value){
+  const match = String(value == null ? '' : value).trim().match(/^([A-Z])(?:\s*[).\-]|\s*$)/i);
+  return match ? match[1].toUpperCase() : '';
+}
+
+function getOptionLetters(q){
+  const options = Array.isArray(q.options) ? q.options : [];
+
+  if(Array.isArray(q.optionLetters)){
+    if(q.optionLetters.length !== options.length) return [];
+
+    const letters = q.optionLetters.map(value => String(value).trim().toUpperCase());
+
+    return letters.every(letter => /^[A-Z]$/.test(letter))
+      && new Set(letters).size === letters.length ? letters : [];
   }
-  const ans = normalizeComparisonText(correctAnswer);
-  for (let i = 0; i < options.length; i++) {
-    const opt = normalizeComparisonText(options[i]);
-    if (opt && (opt === ans || opt.includes(ans) || ans.includes(opt))) return i;
+
+  const prefixes = options.map(extractOptionLetter);
+
+  if(prefixes.length && prefixes.every(Boolean)){
+    return new Set(prefixes).size === prefixes.length ? prefixes : [];
   }
-  return -1;
+
+  return options.length <= LETTERS.length
+    ? options.map((option, index) => LETTERS[index])
+    : [];
+}
+
+function resolveCorrectIndex(options, correctAnswer, optionLetters){
+  if(!Array.isArray(options) || !options.length) return -1;
+
+  const letter = extractOptionLetter(correctAnswer);
+  const letters = getOptionLetters({ options, optionLetters });
+
+  return letter && letters.length === options.length ? letters.indexOf(letter) : -1;
+}
+
+function applyCorrectAnswerKey(q){
+  if(!q || !Array.isArray(q.options)) return q;
+
+  q.optionLetters = getOptionLetters(q);
+
+  const rawAnswer = String(
+    q.correctAnswer == null ? q.correctAnswerLetter || '' : q.correctAnswer
+  ).trim();
+
+  const parts = !q.isMultiple ? [rawAnswer]
+    : /^[A-Z](?:\s*\/\s*[A-Z])*$/i.test(rawAnswer)
+      ? rawAnswer.split('/')
+      : rawAnswer.split(/\s*\/\s*(?=[A-Z]\s*[).\-])/i);
+
+  const indices = parts.map(part => resolveCorrectIndex(q.options, part, q.optionLetters));
+
+  const valid = parts.length > 0
+    && indices.every(index => index >= 0)
+    && new Set(indices).size === indices.length;
+
+  q.correctIndex = !q.isMultiple && valid ? indices[0] : -1;
+  q.correctIndices = q.isMultiple && valid ? indices : [];
+  q.correctAnswerLetter = q.correctIndex >= 0 ? q.optionLetters[q.correctIndex] : '';
+
+  q.correctAnswerText = valid
+    ? indices.map(index => q.isMultiple
+      ? `${q.optionLetters[index]}) ${q.options[index]}`
+      : q.options[index]).join(' / ')
+    : '';
+
+  return q;
+}
+
+function getCorrectIndex(q){
+  applyCorrectAnswerKey(q);
+  return q && Number.isInteger(q.correctIndex) ? q.correctIndex : -1;
+}
+
+function isAnswerCorrect(q, answer){
+  if(!q) return false;
+
+  applyCorrectAnswerKey(q);
+
+  const validIndex = index =>
+    Number.isInteger(index) && index >= 0 && index < q.options.length;
+
+  if(q.isMultiple){
+    return Array.isArray(answer)
+      && q.correctIndices.length > 0
+      && answer.length === q.correctIndices.length
+      && answer.every(validIndex)
+      && new Set(answer).size === answer.length
+      && answer.every(index => q.correctIndices.includes(index));
+  }
+
+  return validIndex(answer)
+    && q.correctIndex >= 0
+    && answer === q.correctIndex;
+}
+
+function getCorrectAnswerText(q){
+  applyCorrectAnswerKey(q);
+  return q && q.correctAnswerText ? q.correctAnswerText : '';
 }
 function parseQuestionFile(raw, meta) {
   const text = normalizeText(raw);
@@ -78,7 +167,7 @@ function parseQuestionFile(raw, meta) {
       for (let i = 0; i < paragraphs.length; i++) {
         const p = paragraphs[i];
         const first = (p.split('\n').find(l => l.trim()) || '').trim();
-        const looksNew = current.length > 0 && hasCorrect && !/^(Correct\s*Answer|Explanation)\s*:/i.test(first) && !/^[A-E][\)\.\-]/.test(first) && !isPageLine(first);
+        const looksNew = current.length > 0 && hasCorrect && !/^(Correct\s*Answer|Explanation)\s*:/i.test(first) && !/^[A-Z]\s*[).\-]/i.test(first) && !isMetadataLine(first);
         if (looksNew) {
           blocks.push(current.join('\n\n').trim());
           current = [];
@@ -124,51 +213,27 @@ function parseQuestionFile(raw, meta) {
     const ansIdx = lines.findIndex(l => /^Correct\s*Answer\s*:/i.test(l));
     if (ansIdx === -1) continue;
     const before = lines.slice(startIndex, ansIdx);
-    const firstOpt = before.findIndex(l => /^[A-E][\)\.\-]\s*/i.test(l));
+        const firstOpt = before.findIndex(l => /^[A-Z]\s*[).\-]\s*/i.test(l));
     if (firstOpt === -1) continue;
     questionText = before.slice(0, firstOpt).join(' ').trim() || ('Question ' + fallback);
-    options = before.slice(firstOpt).filter(l => /^[A-E][\)\.\-]\s*/i.test(l)).map(stripOptionPrefix);
+        const optionLines = before.slice(firstOpt)
+      .filter(l => /^[A-Z]\s*[).\-]\s*/i.test(l));
+
+    const optionLetters = optionLines.map(extractOptionLetter);
+    options = optionLines.map(stripOptionPrefix);
     correctAnswer = lines[ansIdx].replace(/^Correct\s*Answer\s*:\s*/i, '').trim();
     
-    let correctIndex = -1;
-    let correctAnswerText = '';
-    let correctIndices = [];
-    
-    if (isMultiple) {
-      const parts = correctAnswer.split('/').map(p => p.trim()).filter(Boolean);
-      parts.forEach(part => {
-        const m = part.match(/^([A-E])/i);
-        if (m) {
-          const idx = m[1].toUpperCase().charCodeAt(0) - 65;
-          if (idx >= 0 && idx < options.length) correctIndices.push(idx);
-        }
-      });
-      correctAnswerText = correctAnswer;
-    } else {
-      const letterMatch = correctAnswer.match(/^([A-E])\s*[\)\.\-]\s*/i);
-      if(letterMatch) correctAnswerLetter = letterMatch[1].toUpperCase();
-      if(correctAnswerLetter){
-        const letterIndex = correctAnswerLetter.charCodeAt(0) - 65;
-        if(letterIndex >= 0 && letterIndex < options.length){
-          correctIndex = letterIndex;
-          correctAnswerText = options[letterIndex];
-        }
-      }
-      if(correctIndex === -1){
-        const possibleIndex = resolveCorrectIndex(options, correctAnswer);
-        if(possibleIndex >= 0 && options[possibleIndex]){
-          correctIndex = possibleIndex;
-          correctAnswerText = options[possibleIndex];
-        } else {
-          correctAnswerText = stripOptionPrefix(correctAnswer);
-          const fallbackIndex = resolveCorrectIndex(options, correctAnswerText);
-          if(fallbackIndex >= 0 && options[fallbackIndex]){
-            correctIndex = fallbackIndex;
-            correctAnswerText = options[fallbackIndex];
-          }
-        }
-      }
-    }
+        const answerKey = applyCorrectAnswerKey({
+      options,
+      optionLetters,
+      correctAnswer,
+      isMultiple
+    });
+
+    const correctIndex = answerKey.correctIndex;
+    const correctAnswerText = answerKey.correctAnswerText;
+    const correctIndices = answerKey.correctIndices;
+    correctAnswerLetter = answerKey.correctAnswerLetter;
     
     let i = ansIdx + 1;
     if (i < lines.length && /^Explanation\s*:/i.test(lines[i])) {
@@ -199,6 +264,7 @@ function parseQuestionFile(raw, meta) {
       text: questionText,
       options,
       originalOptions: options.slice(),
+      optionLetters,
       correctAnswer,
       correctAnswerText,
       correctIndex,
